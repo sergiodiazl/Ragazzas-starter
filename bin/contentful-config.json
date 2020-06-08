@@ -6,13 +6,13 @@
           "sys": {
             "type": "Link",
             "linkType": "Space",
-            "id": "wfk1x58ndywn"
+            "id": "zlzjaasypn6d"
           }
         },
-        "id": "project",
+        "id": "album",
         "type": "ContentType",
-        "createdAt": "2018-09-07T23:18:52.188Z",
-        "updatedAt": "2018-09-07T23:18:56.446Z",
+        "createdAt": "2020-06-05T14:59:13.946Z",
+        "updatedAt": "2020-06-07T15:00:49.458Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -20,104 +20,158 @@
             "linkType": "Environment"
           }
         },
+        "publishedVersion": 37,
+        "publishedAt": "2020-06-07T15:00:49.458Z",
+        "firstPublishedAt": "2020-06-05T14:59:14.954Z",
         "createdBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
+            "id": "5CXTyPMzRBDC02whZAkrxn"
           }
         },
         "updatedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
+            "id": "5CXTyPMzRBDC02whZAkrxn"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 19,
+        "version": 38,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
+            "id": "5CXTyPMzRBDC02whZAkrxn"
           }
-        },
-        "publishedVersion": 1,
-        "firstPublishedAt": "2018-09-07T23:18:56.446Z",
-        "publishedAt": "2018-09-07T23:18:56.446Z"
+        }
       },
       "displayField": "name",
-      "name": "Project",
-      "description": "Project description",
+      "name": "Album",
+      "description": "Informacion de un album de la banda",
       "fields": [
         {
           "id": "name",
           "name": "Name",
           "type": "Symbol",
           "localized": false,
-          "required": false,
+          "required": true,
           "validations": [],
           "disabled": false,
           "omitted": false
         },
         {
-          "id": "publishedDate",
-          "name": "PublishedDate",
+          "id": "year",
+          "name": "year",
           "type": "Date",
           "localized": false,
-          "required": false,
+          "required": true,
           "validations": [],
           "disabled": false,
           "omitted": false
         },
         {
-          "id": "logo",
-          "name": "Logo",
+          "id": "photo",
+          "name": "Photo",
           "type": "Link",
           "localized": false,
-          "required": false,
+          "required": true,
           "validations": [],
           "disabled": false,
           "omitted": false,
           "linkType": "Asset"
         },
         {
-          "id": "repositoryUrl",
-          "name": "RepositoryUrl",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [],
-          "disabled": false,
-          "omitted": false
-        },
-        {
           "id": "description",
           "name": "Description",
-          "type": "Symbol",
+          "type": "Text",
           "localized": false,
-          "required": false,
+          "required": true,
           "validations": [],
           "disabled": false,
           "omitted": false
         },
         {
-          "id": "projectUrl",
-          "name": "ProjectUrl",
+          "id": "playlist",
+          "name": "Playlist",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "playlist",
+        "type": "ContentType",
+        "createdAt": "2020-06-05T15:01:58.241Z",
+        "updatedAt": "2020-06-07T15:00:52.767Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 35,
+        "publishedAt": "2020-06-07T15:00:52.767Z",
+        "firstPublishedAt": "2020-06-05T15:01:59.066Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 18,
+        "version": 36,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        }
+      },
+      "displayField": "nombre",
+      "name": "Playlist",
+      "description": "Una playlist de spoitify",
+      "fields": [
+        {
+          "id": "nombre",
+          "name": "nombre",
           "type": "Symbol",
           "localized": false,
-          "required": false,
+          "required": true,
           "validations": [],
           "disabled": false,
           "omitted": false
         },
         {
-          "id": "type",
-          "name": "Type",
-          "type": "Symbol",
+          "id": "linkPlaylist",
+          "name": "link playlist",
+          "type": "Text",
           "localized": false,
-          "required": false,
+          "required": true,
           "validations": [],
           "disabled": false,
           "omitted": false
@@ -130,13 +184,13 @@
           "sys": {
             "type": "Link",
             "linkType": "Space",
-            "id": "ntiequ7mc6q6"
+            "id": "zlzjaasypn6d"
           }
         },
-        "id": "about",
+        "id": "socialLink",
         "type": "ContentType",
-        "createdAt": "2018-09-07T23:18:52.234Z",
-        "updatedAt": "2018-09-17T12:05:25.813Z",
+        "createdAt": "2020-06-05T16:00:23.349Z",
+        "updatedAt": "2020-06-07T15:00:52.252Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -144,43 +198,126 @@
             "linkType": "Environment"
           }
         },
+        "publishedVersion": 37,
+        "publishedAt": "2020-06-07T15:00:52.252Z",
+        "firstPublishedAt": "2020-06-05T16:00:28.473Z",
         "createdBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
+            "id": "5CXTyPMzRBDC02whZAkrxn"
           }
         },
         "updatedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
+            "id": "5CXTyPMzRBDC02whZAkrxn"
           }
         },
-        "publishedCounter": 5,
-        "version": 10,
+        "publishedCounter": 19,
+        "version": 38,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
+            "id": "5CXTyPMzRBDC02whZAkrxn"
           }
-        },
-        "publishedVersion": 9,
-        "firstPublishedAt": "2018-09-07T23:18:58.249Z",
-        "publishedAt": "2018-09-17T12:05:25.813Z"
+        }
       },
       "displayField": "name",
-      "name": "About",
-      "description": "All information related to personal data.",
+      "name": "Social Link",
+      "description": "Social Link to display with a font awesome icon.",
       "fields": [
         {
           "id": "name",
           "name": "Name",
           "type": "Symbol",
           "localized": false,
-          "required": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "url",
+          "name": "URL",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "fontAwesomeIcon",
+          "name": "Font Awesome Icon",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "about",
+        "type": "ContentType",
+        "createdAt": "2020-06-05T16:46:18.432Z",
+        "updatedAt": "2020-06-07T15:00:51.794Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 61,
+        "publishedAt": "2020-06-07T15:00:51.794Z",
+        "firstPublishedAt": "2020-06-05T16:46:19.306Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 31,
+        "version": 62,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "About",
+      "description": "Info de la banda",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
           "validations": [],
           "disabled": false,
           "omitted": false
@@ -188,16 +325,56 @@
         {
           "id": "description",
           "name": "Description",
-          "type": "Symbol",
+          "type": "Text",
           "localized": false,
-          "required": false,
+          "required": true,
           "validations": [],
           "disabled": false,
           "omitted": false
         },
         {
-          "id": "roles",
-          "name": "Roles",
+          "id": "aboutUs",
+          "name": "About us",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "profile",
+          "name": "Profile",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "linkMimetypeGroup": ["image"]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "logo",
+          "name": "Logo",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "linkMimetypeGroup": ["image"]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "featuredContent",
+          "name": "FeaturedContent",
           "type": "Array",
           "localized": false,
           "required": false,
@@ -205,16 +382,21 @@
           "disabled": false,
           "omitted": false,
           "items": {
-            "type": "Symbol",
-            "validations": []
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": ["featured"]
+              }
+            ],
+            "linkType": "Entry"
           }
         },
         {
           "id": "socialLinks",
-          "name": "Social Links",
+          "name": "socialLinks",
           "type": "Array",
           "localized": false,
-          "required": false,
+          "required": true,
           "validations": [],
           "disabled": false,
           "omitted": false,
@@ -229,39 +411,42 @@
           }
         },
         {
-          "id": "profile",
-          "name": "Profile",
+          "id": "tour",
+          "name": "Tour",
           "type": "Link",
           "localized": false,
           "required": false,
+          "validations": [
+            {
+              "linkContentType": ["tour"]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "members",
+          "name": "Members",
+          "type": "Array",
+          "localized": false,
+          "required": true,
           "validations": [],
           "disabled": false,
           "omitted": false,
-          "linkType": "Asset"
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": ["member"]
+              }
+            ],
+            "linkType": "Entry"
+          }
         },
         {
-          "id": "aboutMe",
-          "name": "About me",
-          "type": "Text",
-          "localized": false,
-          "required": false,
-          "validations": [],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "mediumUser",
-          "name": "Medium User",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "projects",
-          "name": "Projects",
+          "id": "albums",
+          "name": "Albums",
           "type": "Array",
           "localized": false,
           "required": false,
@@ -272,7 +457,7 @@
             "type": "Link",
             "validations": [
               {
-                "linkContentType": ["project"]
+                "linkContentType": ["album"]
               }
             ],
             "linkType": "Entry"
@@ -286,13 +471,13 @@
           "sys": {
             "type": "Link",
             "linkType": "Space",
-            "id": "ntiequ7mc6q6"
+            "id": "zlzjaasypn6d"
           }
         },
-        "id": "socialLink",
+        "id": "member",
         "type": "ContentType",
-        "createdAt": "2018-09-07T23:18:52.248Z",
-        "updatedAt": "2018-09-17T12:03:26.939Z",
+        "createdAt": "2020-06-05T16:49:53.096Z",
+        "updatedAt": "2020-06-07T15:00:51.335Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -300,50 +485,198 @@
             "linkType": "Environment"
           }
         },
+        "publishedVersion": 33,
+        "publishedAt": "2020-06-07T15:00:51.335Z",
+        "firstPublishedAt": "2020-06-05T16:49:53.785Z",
         "createdBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
+            "id": "5CXTyPMzRBDC02whZAkrxn"
           }
         },
         "updatedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
+            "id": "5CXTyPMzRBDC02whZAkrxn"
           }
         },
-        "publishedCounter": 2,
-        "version": 4,
+        "publishedCounter": 17,
+        "version": 34,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
+            "id": "5CXTyPMzRBDC02whZAkrxn"
           }
-        },
-        "publishedVersion": 3,
-        "firstPublishedAt": "2018-09-07T23:18:57.463Z",
-        "publishedAt": "2018-09-17T12:03:26.939Z"
+        }
       },
       "displayField": "name",
-      "name": "Social Link",
-      "description": "Social Link to display with a font awesome icon.",
+      "name": "Member",
+      "description": "Un miembro de la banda",
       "fields": [
         {
           "id": "name",
           "name": "Name",
           "type": "Symbol",
           "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "role",
+          "name": "role",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "photo",
+          "name": "Photo",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "info",
+          "name": "info",
+          "type": "RichText",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "nodes": {}
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "socialLinks",
+          "name": "SocialLinks",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": ["socialLink"]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "order",
+          "name": "order",
+          "type": "Integer",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "featured",
+        "type": "ContentType",
+        "createdAt": "2020-06-05T17:21:01.013Z",
+        "updatedAt": "2020-06-07T15:00:50.856Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 33,
+        "publishedAt": "2020-06-07T15:00:50.856Z",
+        "firstPublishedAt": "2020-06-05T17:21:01.706Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 17,
+        "version": 34,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Featured",
+      "description": "Contenido destacado en la portada",
+      "fields": [
+        {
+          "id": "title",
+          "name": "title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "text",
+          "name": "text",
+          "type": "Text",
+          "localized": false,
           "required": false,
           "validations": [],
           "disabled": false,
           "omitted": false
         },
         {
-          "id": "url",
-          "name": "URL",
+          "id": "photo",
+          "name": "photo",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "link",
+          "name": "link",
           "type": "Symbol",
           "localized": false,
           "required": false,
@@ -352,11 +685,267 @@
           "omitted": false
         },
         {
-          "id": "fontAwesomeIcon",
-          "name": "Font Awesome Icon",
+          "id": "linkText",
+          "name": "LinkText",
           "type": "Symbol",
           "localized": false,
           "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "order",
+          "name": "order",
+          "type": "Integer",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "concert",
+        "type": "ContentType",
+        "createdAt": "2020-06-06T23:17:01.065Z",
+        "updatedAt": "2020-06-07T15:00:50.389Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 29,
+        "publishedAt": "2020-06-07T15:00:50.389Z",
+        "firstPublishedAt": "2020-06-06T23:17:01.981Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 15,
+        "version": 30,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        }
+      },
+      "displayField": "place",
+      "name": "Concert",
+      "description": "Proximos conciertos",
+      "fields": [
+        {
+          "id": "time",
+          "name": "time",
+          "type": "Date",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "place",
+          "name": "place",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "link",
+          "name": "link",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "cancelled",
+          "name": "cancelled",
+          "type": "Boolean",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "message",
+          "name": "message",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "tickets",
+          "name": "tickets",
+          "type": "Boolean",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "tour",
+        "type": "ContentType",
+        "createdAt": "2020-06-06T23:18:17.840Z",
+        "updatedAt": "2020-06-07T15:00:49.933Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 41,
+        "publishedAt": "2020-06-07T15:00:49.933Z",
+        "firstPublishedAt": "2020-06-06T23:18:18.673Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 21,
+        "version": 42,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        }
+      },
+      "displayField": "message",
+      "name": "Tour",
+      "description": "Datos de la gira",
+      "fields": [
+        {
+          "id": "message",
+          "name": "Message",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "noConcertMessage",
+          "name": "NoConcertMessage",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "concerts",
+          "name": "Concerts",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": ["concert"]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "photo",
+          "name": "Photo",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "cancelledMessage",
+          "name": "CancelledMessage",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "ticketsMessage",
+          "name": "ticketsMessage",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "noTIcketsMessage",
+          "name": "NoTIcketsMessage",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
           "validations": [],
           "disabled": false,
           "omitted": false
@@ -371,31 +960,31 @@
         "type": "EditorInterface",
         "space": {
           "sys": {
-            "id": "ntiequ7mc6q6",
+            "id": "zlzjaasypn6d",
             "type": "Link",
             "linkType": "Space"
           }
         },
-        "version": 2,
-        "createdAt": "2018-09-07T23:18:56.627Z",
+        "version": 38,
+        "createdAt": "2020-06-05T14:59:15.039Z",
         "createdBy": {
           "sys": {
-            "id": "2XGcyQ3vKgm55htxMAIqsM",
+            "id": "5CXTyPMzRBDC02whZAkrxn",
             "type": "Link",
             "linkType": "User"
           }
         },
-        "updatedAt": "2018-09-07T23:19:00.619Z",
+        "updatedAt": "2020-06-07T15:00:54.232Z",
         "updatedBy": {
           "sys": {
-            "id": "2XGcyQ3vKgm55htxMAIqsM",
+            "id": "5CXTyPMzRBDC02whZAkrxn",
             "type": "Link",
             "linkType": "User"
           }
         },
         "contentType": {
           "sys": {
-            "id": "project",
+            "id": "album",
             "type": "Link",
             "linkType": "ContentType"
           }
@@ -411,31 +1000,40 @@
       "controls": [
         {
           "fieldId": "name",
-          "widgetId": "singleLine"
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "publishedDate",
-          "widgetId": "datePicker"
+          "fieldId": "year",
+          "settings": {
+            "ampm": "24",
+            "format": "timeZ"
+          },
+          "widgetId": "datePicker",
+          "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "logo",
-          "widgetId": "assetLinkEditor"
-        },
-        {
-          "fieldId": "repositoryUrl",
-          "widgetId": "singleLine"
+          "fieldId": "photo",
+          "settings": {
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
         },
         {
           "fieldId": "description",
-          "widgetId": "singleLine"
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "projectUrl",
-          "widgetId": "singleLine"
-        },
-        {
-          "fieldId": "type",
-          "widgetId": "singleLine"
+          "fieldId": "playlist",
+          "settings": {
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
         }
       ]
     },
@@ -445,31 +1043,31 @@
         "type": "EditorInterface",
         "space": {
           "sys": {
-            "id": "ntiequ7mc6q6",
+            "id": "zlzjaasypn6d",
             "type": "Link",
             "linkType": "Space"
           }
         },
-        "version": 10,
-        "createdAt": "2018-09-07T23:18:58.429Z",
+        "version": 36,
+        "createdAt": "2020-06-05T15:01:59.122Z",
         "createdBy": {
           "sys": {
-            "id": "2XGcyQ3vKgm55htxMAIqsM",
+            "id": "5CXTyPMzRBDC02whZAkrxn",
             "type": "Link",
             "linkType": "User"
           }
         },
-        "updatedAt": "2018-09-17T12:05:26.511Z",
+        "updatedAt": "2020-06-07T15:00:53.721Z",
         "updatedBy": {
           "sys": {
-            "id": "2XGcyQ3vKgm55htxMAIqsM",
+            "id": "5CXTyPMzRBDC02whZAkrxn",
             "type": "Link",
             "linkType": "User"
           }
         },
         "contentType": {
           "sys": {
-            "id": "about",
+            "id": "playlist",
             "type": "Link",
             "linkType": "ContentType"
           }
@@ -484,42 +1082,14 @@
       },
       "controls": [
         {
-          "fieldId": "name",
-          "widgetId": "singleLine"
+          "fieldId": "nombre",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "description",
-          "widgetId": "singleLine"
-        },
-        {
-          "fieldId": "roles",
-          "widgetId": "tagEditor"
-        },
-        {
-          "fieldId": "socialLinks",
-          "settings": {
-            "bulkEditing": false
-          },
-          "widgetId": "entryLinksEditor"
-        },
-        {
-          "fieldId": "profile",
-          "widgetId": "assetLinkEditor"
-        },
-        {
-          "fieldId": "aboutMe",
-          "widgetId": "markdown"
-        },
-        {
-          "fieldId": "mediumUser",
-          "widgetId": "singleLine"
-        },
-        {
-          "fieldId": "projects",
-          "settings": {
-            "bulkEditing": false
-          },
-          "widgetId": "entryLinksEditor"
+          "fieldId": "linkPlaylist",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
         }
       ]
     },
@@ -529,24 +1099,24 @@
         "type": "EditorInterface",
         "space": {
           "sys": {
-            "id": "ntiequ7mc6q6",
+            "id": "zlzjaasypn6d",
             "type": "Link",
             "linkType": "Space"
           }
         },
-        "version": 4,
-        "createdAt": "2018-09-07T23:18:57.615Z",
+        "version": 38,
+        "createdAt": "2020-06-05T16:00:28.548Z",
         "createdBy": {
           "sys": {
-            "id": "2XGcyQ3vKgm55htxMAIqsM",
+            "id": "5CXTyPMzRBDC02whZAkrxn",
             "type": "Link",
             "linkType": "User"
           }
         },
-        "updatedAt": "2018-09-17T12:03:27.550Z",
+        "updatedAt": "2020-06-07T15:00:53.712Z",
         "updatedBy": {
           "sys": {
-            "id": "2XGcyQ3vKgm55htxMAIqsM",
+            "id": "5CXTyPMzRBDC02whZAkrxn",
             "type": "Link",
             "linkType": "User"
           }
@@ -569,15 +1139,477 @@
       "controls": [
         {
           "fieldId": "name",
-          "widgetId": "singleLine"
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
         },
         {
           "fieldId": "url",
-          "widgetId": "singleLine"
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
         },
         {
           "fieldId": "fontAwesomeIcon",
-          "widgetId": "singleLine"
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "zlzjaasypn6d",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 62,
+        "createdAt": "2020-06-05T16:46:19.366Z",
+        "createdBy": {
+          "sys": {
+            "id": "5CXTyPMzRBDC02whZAkrxn",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-06-07T15:00:55.706Z",
+        "updatedBy": {
+          "sys": {
+            "id": "5CXTyPMzRBDC02whZAkrxn",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "about",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "aboutUs",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "profile",
+          "settings": {
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "logo",
+          "settings": {
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "featuredContent",
+          "settings": {
+            "bulkEditing": false,
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "socialLinks",
+          "settings": {
+            "bulkEditing": false,
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "tour",
+          "settings": {
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "members",
+          "settings": {
+            "bulkEditing": false,
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "albums",
+          "settings": {
+            "bulkEditing": false,
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "zlzjaasypn6d",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 34,
+        "createdAt": "2020-06-05T16:49:53.863Z",
+        "createdBy": {
+          "sys": {
+            "id": "5CXTyPMzRBDC02whZAkrxn",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-06-07T15:00:56.200Z",
+        "updatedBy": {
+          "sys": {
+            "id": "5CXTyPMzRBDC02whZAkrxn",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "member",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "role",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "photo",
+          "settings": {
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "info",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "socialLinks",
+          "settings": {
+            "bulkEditing": false,
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "order",
+          "widgetId": "numberEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "zlzjaasypn6d",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 34,
+        "createdAt": "2020-06-05T17:21:01.789Z",
+        "createdBy": {
+          "sys": {
+            "id": "5CXTyPMzRBDC02whZAkrxn",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-06-07T15:00:55.702Z",
+        "updatedBy": {
+          "sys": {
+            "id": "5CXTyPMzRBDC02whZAkrxn",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "featured",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "text",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "photo",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "link",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "linkText",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "order",
+          "widgetId": "numberEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "zlzjaasypn6d",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 30,
+        "createdAt": "2020-06-06T23:17:02.051Z",
+        "createdBy": {
+          "sys": {
+            "id": "5CXTyPMzRBDC02whZAkrxn",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-06-07T15:00:56.024Z",
+        "updatedBy": {
+          "sys": {
+            "id": "5CXTyPMzRBDC02whZAkrxn",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "concert",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "time",
+          "settings": {
+            "ampm": "24",
+            "format": "timeZ"
+          },
+          "widgetId": "datePicker",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "place",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "link",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "cancelled",
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "message",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "tickets",
+          "settings": {
+            "trueLabel": "Yes",
+            "falseLabel": "No"
+          },
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "zlzjaasypn6d",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 42,
+        "createdAt": "2020-06-06T23:18:18.740Z",
+        "createdBy": {
+          "sys": {
+            "id": "5CXTyPMzRBDC02whZAkrxn",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-06-07T15:00:55.974Z",
+        "updatedBy": {
+          "sys": {
+            "id": "5CXTyPMzRBDC02whZAkrxn",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "tour",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "message",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "noConcertMessage",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "concerts",
+          "settings": {
+            "bulkEditing": false,
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "photo",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "cancelledMessage",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "ticketsMessage",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "noTIcketsMessage",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
         }
       ]
     }
@@ -589,13 +1621,13 @@
           "sys": {
             "type": "Link",
             "linkType": "Space",
-            "id": "ntiequ7mc6q6"
+            "id": "zlzjaasypn6d"
           }
         },
-        "id": "5lzMxuCX84uYqmgGmU8iKU",
+        "id": "4m04grxd2qYCjE7T6DP7eD",
         "type": "Entry",
-        "createdAt": "2018-09-08T08:08:42.747Z",
-        "updatedAt": "2018-09-17T12:09:24.193Z",
+        "createdAt": "2020-06-05T15:02:25.027Z",
+        "updatedAt": "2020-06-07T15:01:16.418Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -603,32 +1635,498 @@
             "linkType": "Environment"
           }
         },
+        "publishedVersion": 35,
+        "publishedAt": "2020-06-07T15:01:16.418Z",
+        "firstPublishedAt": "2020-06-05T15:11:20.652Z",
         "createdBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
+            "id": "5CXTyPMzRBDC02whZAkrxn"
           }
         },
         "updatedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
+            "id": "5CXTyPMzRBDC02whZAkrxn"
           }
         },
-        "publishedCounter": 12,
-        "version": 1186,
+        "publishedCounter": 15,
+        "version": 36,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
+            "id": "5CXTyPMzRBDC02whZAkrxn"
           }
         },
-        "publishedVersion": 1185,
-        "firstPublishedAt": "2018-09-08T08:18:29.722Z",
-        "publishedAt": "2018-09-17T12:09:24.193Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "album"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Amor o muerte"
+        },
+        "year": {
+          "en-US": "2016-05-08T00:00-03:00"
+        },
+        "photo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "1XlY4vlIHs6upuLO3TWMF5"
+            }
+          }
+        },
+        "description": {
+          "en-US": "Descripcion blablabalabla"
+        },
+        "playlist": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1eqGOOwsa9qyWjPlqGdwuT"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "1eqGOOwsa9qyWjPlqGdwuT",
+        "type": "Entry",
+        "createdAt": "2020-06-05T15:26:10.377Z",
+        "updatedAt": "2020-06-07T15:01:15.864Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 37,
+        "publishedAt": "2020-06-07T15:01:15.864Z",
+        "firstPublishedAt": "2020-06-05T15:28:10.249Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 18,
+        "version": 38,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "playlist"
+          }
+        }
+      },
+      "fields": {
+        "nombre": {
+          "en-US": "Amor o muerte"
+        },
+        "linkPlaylist": {
+          "en-US": "https://open.spotify.com/embed/album/4odb3p7Go0F8Fg38GbFRxW"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "2A6C05RoCVhe0gIUhDrpHN",
+        "type": "Entry",
+        "createdAt": "2020-06-05T17:24:00.922Z",
+        "updatedAt": "2020-06-07T15:01:30.953Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 35,
+        "publishedAt": "2020-06-07T15:01:30.953Z",
+        "firstPublishedAt": "2020-06-05T17:25:46.585Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 16,
+        "version": 36,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "socialLink"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Instagram de Fran"
+        },
+        "url": {
+          "en-US": "https://www.instagram.com/apuradisimo/"
+        },
+        "fontAwesomeIcon": {
+          "en-US": "instagram"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "2WW4lfTpHnYbmZB29tlKBj",
+        "type": "Entry",
+        "createdAt": "2020-06-05T17:26:10.584Z",
+        "updatedAt": "2020-06-07T15:01:30.388Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 33,
+        "publishedAt": "2020-06-07T15:01:30.388Z",
+        "firstPublishedAt": "2020-06-05T17:26:38.287Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 16,
+        "version": 34,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "socialLink"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Instagram"
+        },
+        "url": {
+          "en-US": "https://www.instagram.com/_ragazzas_/"
+        },
+        "fontAwesomeIcon": {
+          "en-US": "instagram"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "4gnVlgjZQF7f6atYHRzXEG",
+        "type": "Entry",
+        "createdAt": "2020-06-05T17:27:32.538Z",
+        "updatedAt": "2020-06-07T15:01:29.618Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 41,
+        "publishedAt": "2020-06-07T15:01:29.618Z",
+        "firstPublishedAt": "2020-06-05T17:32:10.148Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 16,
+        "version": 42,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "member"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Fran"
+        },
+        "role": {
+          "en-US": "Guitarra"
+        },
+        "photo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "pp5QQm6NWvAGOqyt6tELG"
+            }
+          }
+        },
+        "info": {
+          "en-US": {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "A Fran le gusta ver como se mueven los pastos cuando llueve y comer Fugazzeta fria con mate cocido",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "socialLinks": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2A6C05RoCVhe0gIUhDrpHN"
+              }
+            }
+          ]
+        },
+        "order": {
+          "en-US": 1
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "Dp0Bf2ZeT9WllcgxrFlYW",
+        "type": "Entry",
+        "createdAt": "2020-06-05T17:33:10.575Z",
+        "updatedAt": "2020-06-07T15:01:28.901Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 44,
+        "publishedAt": "2020-06-07T15:01:28.901Z",
+        "firstPublishedAt": "2020-06-05T17:44:09.310Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 16,
+        "version": 45,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "featured"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Nuevo EP - Pelea"
+        },
+        "text": {
+          "en-US": "Ya salió nuestro nuevo EP -Pelea "
+        },
+        "photo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4mh5p5XnCYj5gTJQd3FzuV"
+            }
+          }
+        },
+        "link": {
+          "en-US": "https://l.instagram.com/?u=https%3A%2F%2Fspoti.fi%2F2ZURF51&e=ATN2a01pUjncUkyBLsmGumoTB_UuHrCvIVwn8lWUONxYgtL0_qcV-bTYfLbjdUimZZhccIrKxlrD81v98u4OpA&s=1"
+        },
+        "linkText": {
+          "en-US": "Escuchalo"
+        },
+        "order": {
+          "en-US": 1
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "16CyiRgJQgSc5KXGDtdPdS",
+        "type": "Entry",
+        "createdAt": "2020-06-05T17:46:32.870Z",
+        "updatedAt": "2020-06-07T15:01:16.956Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 63,
+        "publishedAt": "2020-06-07T15:01:16.956Z",
+        "firstPublishedAt": "2020-06-05T17:50:24.308Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 16,
+        "version": 64,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
         "contentType": {
           "sys": {
             "type": "Link",
@@ -639,17 +2137,55 @@
       },
       "fields": {
         "name": {
-          "en-US": "Mate"
+          "en-US": "Ragazzas"
         },
         "description": {
-          "en-US": "Gatsby v2 starter to create a top notch portfolio!"
+          "en-US": "Somos Ragazzzas,una banda de Avellanda,aguante zona sur"
         },
-        "roles": {
+        "aboutUs": {
+          "en-US": "Empezamos hace un buen rato y nos seguimos divirtiendo , tocando donde nos inviten y en cualquier otro lado.Y más texto para rellenar, no se me ocurre nada jeje."
+        },
+        "profile": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "1BilhzwBdVqEEY8Rw59M5P"
+            }
+          }
+        },
+        "logo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "77zKKS10lcdVx6N5QGyp47"
+            }
+          }
+        },
+        "featuredContent": {
           "en-US": [
-            "Quick setup 🚀",
-            "Responsive 📱",
-            "PWA ✨",
-            "Contentful CMS 🔧"
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "Dp0Bf2ZeT9WllcgxrFlYW"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5Jm85WP1Bevtpd0adbHdbJ"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4rNJTqM3bI6y3BQFHpMZ2n"
+              }
+            }
           ]
         },
         "socialLinks": {
@@ -658,68 +2194,87 @@
               "sys": {
                 "type": "Link",
                 "linkType": "Entry",
-                "id": "4SrlLN9bt6Yew2UyGgM06a"
+                "id": "2WW4lfTpHnYbmZB29tlKBj"
               }
             },
             {
               "sys": {
                 "type": "Link",
                 "linkType": "Entry",
-                "id": "3DpgtG8qI8QCWyEAuME4Ku"
+                "id": "5m3dpKgCYbpzsrYnf6cq6P"
               }
             },
             {
               "sys": {
                 "type": "Link",
                 "linkType": "Entry",
-                "id": "114ApRkJZq640w8G2GwM8w"
+                "id": "3C8F1HWGm8RgQrjfwLGCYu"
               }
             },
             {
               "sys": {
                 "type": "Link",
                 "linkType": "Entry",
-                "id": "4J6WFTjoMUCmQKuKAaOsqE"
+                "id": "3YbAfkB1tnWCYi8gHmc4Fo"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2RJ6dekpoxClP0kEvc3i2"
               }
             }
           ]
         },
-        "profile": {
+        "tour": {
           "en-US": {
             "sys": {
               "type": "Link",
-              "linkType": "Asset",
-              "id": "6nf3rNaaVaUqYcoAcciSeC"
+              "linkType": "Entry",
+              "id": "76EfYVuRpJ0KPjfeFw6BdH"
             }
           }
         },
-        "aboutMe": {
-          "en-US": "Hello 👋 I'm Mate a gatsby starter which is focus on simplicity and extensibility. It's build with Gatsby(duh), [Rebass](https://jxnblk.com/rebass/) (styled-component system) and [Contentful](https://www.contentful.com/).\n\nThe starter will give you 4 sections (it's really easy to add more if you want 😃):\n* [Landing:](#home) Displays a nice greeting with your name, also your roles (what you  are) and all your social links.\n* [About:](#about) Show the about section where you can write about who you are, what you like to do, etc. Also you can add a photo next to it!\n* [Project:](#projects) Displays a card for all your project that you've made and also the posibility to link with github or and external link.\n* [Writing:](#writing) Take the information about your medium user and show up to 6 stories as cards with the link to Medium."
-        },
-        "mediumUser": {
-          "en-US": "@mate.starter"
-        },
-        "projects": {
+        "members": {
           "en-US": [
             {
               "sys": {
                 "type": "Link",
                 "linkType": "Entry",
-                "id": "6Y7EIx73nUCWuoIWcsuM00"
+                "id": "4gnVlgjZQF7f6atYHRzXEG"
               }
             },
             {
               "sys": {
                 "type": "Link",
                 "linkType": "Entry",
-                "id": "2GKNR2f4z6IwAg6a2MmKCc"
+                "id": "7miX1DlDUswhi7oibTN9ZX"
               }
             },
             {
               "sys": {
                 "type": "Link",
                 "linkType": "Entry",
-                "id": "5paxSRHbAkmgMc4WSW8S66"
+                "id": "2U3HnkdGxAkP8UaIo9MfSO"
+              }
+            }
+          ]
+        },
+        "albums": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4m04grxd2qYCjE7T6DP7eD"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4o8lLamDZFfQQyEkkiYvMM"
               }
             }
           ]
@@ -732,13 +2287,13 @@
           "sys": {
             "type": "Link",
             "linkType": "Space",
-            "id": "ntiequ7mc6q6"
+            "id": "zlzjaasypn6d"
           }
         },
-        "id": "4SrlLN9bt6Yew2UyGgM06a",
+        "id": "114ApRkJZq640w8G2GwM8w",
         "type": "Entry",
-        "createdAt": "2018-09-08T08:10:31.702Z",
-        "updatedAt": "2018-09-08T08:10:51.574Z",
+        "createdAt": "2020-06-05T19:58:37.791Z",
+        "updatedAt": "2020-06-07T15:01:28.183Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -746,416 +2301,32 @@
             "linkType": "Environment"
           }
         },
+        "publishedVersion": 31,
+        "publishedAt": "2020-06-07T15:01:28.183Z",
+        "firstPublishedAt": "2020-06-05T19:58:40.459Z",
         "createdBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
+            "id": "5CXTyPMzRBDC02whZAkrxn"
           }
         },
         "updatedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
+            "id": "5CXTyPMzRBDC02whZAkrxn"
           }
         },
-        "publishedCounter": 1,
-        "version": 10,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
-          }
-        },
-        "publishedVersion": 9,
-        "firstPublishedAt": "2018-09-08T08:10:51.574Z",
-        "publishedAt": "2018-09-08T08:10:51.574Z",
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "socialLink"
-          }
-        }
-      },
-      "fields": {
-        "name": {
-          "en-US": "Github"
-        },
-        "url": {
-          "en-US": "https://github.com/EmaSuriano/gatsby-starter-mate/blob/master/README.md"
-        },
-        "fontAwesomeIcon": {
-          "en-US": "github"
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "ntiequ7mc6q6"
-          }
-        },
-        "id": "5paxSRHbAkmgMc4WSW8S66",
-        "type": "Entry",
-        "createdAt": "2018-09-08T08:25:47.955Z",
-        "updatedAt": "2018-09-08T09:40:56.658Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
-          }
-        },
-        "publishedCounter": 2,
-        "version": 51,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
-          }
-        },
-        "publishedVersion": 50,
-        "firstPublishedAt": "2018-09-08T08:38:15.314Z",
-        "publishedAt": "2018-09-08T09:40:56.657Z",
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "project"
-          }
-        }
-      },
-      "fields": {
-        "name": {
-          "en-US": "Google"
-        },
-        "publishedDate": {
-          "en-US": "1998-06-19T00:00+02:00"
-        },
-        "logo": {
-          "en-US": {
-            "sys": {
-              "type": "Link",
-              "linkType": "Asset",
-              "id": "3AorRmtWOsGQ4o8gK0YWKG"
-            }
-          }
-        },
-        "repositoryUrl": {
-          "en-US": "https://github.com/google"
-        },
-        "description": {
-          "en-US": "It is the most-used search engine on the World Wide Web, handling more than three billion searches each day."
-        },
-        "projectUrl": {
-          "en-US": "https://www.google.com/"
-        },
-        "type": {
-          "en-US": "Web"
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "ntiequ7mc6q6"
-          }
-        },
-        "id": "2GKNR2f4z6IwAg6a2MmKCc",
-        "type": "Entry",
-        "createdAt": "2018-09-08T09:31:01.989Z",
-        "updatedAt": "2018-09-08T09:43:24.088Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
-          }
-        },
-        "publishedCounter": 2,
+        "publishedCounter": 16,
         "version": 32,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
+            "id": "5CXTyPMzRBDC02whZAkrxn"
           }
         },
-        "publishedVersion": 31,
-        "firstPublishedAt": "2018-09-08T09:34:11.498Z",
-        "publishedAt": "2018-09-08T09:43:24.088Z",
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "project"
-          }
-        }
-      },
-      "fields": {
-        "name": {
-          "en-US": "Gatsby JS"
-        },
-        "publishedDate": {
-          "en-US": "2016-09-01T00:00+02:00"
-        },
-        "logo": {
-          "en-US": {
-            "sys": {
-              "type": "Link",
-              "linkType": "Asset",
-              "id": "6rkOXCpyvuekYIgy6U6gGu"
-            }
-          }
-        },
-        "repositoryUrl": {
-          "en-US": "https://github.com/gatsbyjs/gatsby"
-        },
-        "description": {
-          "en-US": " Gatsby is a React-based, GraphQL powered, static site generator. Overall think, part Jekyll, part create-react-app."
-        },
-        "projectUrl": {
-          "en-US": "https://www.gatsbyjs.org/"
-        },
-        "type": {
-          "en-US": "Framework"
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "ntiequ7mc6q6"
-          }
-        },
-        "id": "6Y7EIx73nUCWuoIWcsuM00",
-        "type": "Entry",
-        "createdAt": "2018-09-08T09:34:51.064Z",
-        "updatedAt": "2018-09-08T09:38:14.627Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
-          }
-        },
-        "publishedCounter": 4,
-        "version": 20,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
-          }
-        },
-        "publishedVersion": 19,
-        "firstPublishedAt": "2018-09-08T09:35:59.528Z",
-        "publishedAt": "2018-09-08T09:38:14.627Z",
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "project"
-          }
-        }
-      },
-      "fields": {
-        "name": {
-          "en-US": "Facebook"
-        },
-        "publishedDate": {
-          "en-US": "2004-09-01T00:00+02:00"
-        },
-        "logo": {
-          "en-US": {
-            "sys": {
-              "type": "Link",
-              "linkType": "Asset",
-              "id": "u3Um4zkMrAaQioyq4oSIW"
-            }
-          }
-        },
-        "repositoryUrl": {
-          "en-US": "https://github.com/facebook"
-        },
-        "description": {
-          "en-US": "Facebook is a popular free social networking website that allows registered users to keep in touch with friends."
-        },
-        "projectUrl": {
-          "en-US": "http://facebook.com/"
-        },
-        "type": {
-          "en-US": "Web"
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "ntiequ7mc6q6"
-          }
-        },
-        "id": "3DpgtG8qI8QCWyEAuME4Ku",
-        "type": "Entry",
-        "createdAt": "2018-09-17T12:07:45.316Z",
-        "updatedAt": "2018-09-17T12:08:02.358Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 14,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
-          }
-        },
-        "publishedVersion": 13,
-        "firstPublishedAt": "2018-09-17T12:08:02.358Z",
-        "publishedAt": "2018-09-17T12:08:02.358Z",
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "socialLink"
-          }
-        }
-      },
-      "fields": {
-        "name": {
-          "en-US": "Medium"
-        },
-        "url": {
-          "en-US": "https://medium.com/@emasuriano"
-        },
-        "fontAwesomeIcon": {
-          "en-US": "medium"
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "ntiequ7mc6q6"
-          }
-        },
-        "id": "114ApRkJZq640w8G2GwM8w",
-        "type": "Entry",
-        "createdAt": "2018-09-17T12:08:27.655Z",
-        "updatedAt": "2018-09-17T12:08:43.183Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 5,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
-          }
-        },
-        "publishedVersion": 4,
-        "firstPublishedAt": "2018-09-17T12:08:43.183Z",
-        "publishedAt": "2018-09-17T12:08:43.183Z",
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1182,13 +2353,13 @@
           "sys": {
             "type": "Link",
             "linkType": "Space",
-            "id": "ntiequ7mc6q6"
+            "id": "zlzjaasypn6d"
           }
         },
-        "id": "4J6WFTjoMUCmQKuKAaOsqE",
+        "id": "3DpgtG8qI8QCWyEAuME4Ku",
         "type": "Entry",
-        "createdAt": "2018-09-17T12:08:48.454Z",
-        "updatedAt": "2018-09-17T12:08:57.490Z",
+        "createdAt": "2020-06-05T19:58:37.832Z",
+        "updatedAt": "2020-06-07T15:01:27.696Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1196,32 +2367,164 @@
             "linkType": "Environment"
           }
         },
+        "publishedVersion": 31,
+        "publishedAt": "2020-06-07T15:01:27.696Z",
+        "firstPublishedAt": "2020-06-05T19:58:41.258Z",
         "createdBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
+            "id": "5CXTyPMzRBDC02whZAkrxn"
           }
         },
         "updatedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
+            "id": "5CXTyPMzRBDC02whZAkrxn"
           }
         },
-        "publishedCounter": 1,
-        "version": 5,
+        "publishedCounter": 16,
+        "version": 32,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
+            "id": "5CXTyPMzRBDC02whZAkrxn"
           }
         },
-        "publishedVersion": 4,
-        "firstPublishedAt": "2018-09-17T12:08:57.490Z",
-        "publishedAt": "2018-09-17T12:08:57.490Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "socialLink"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Medium"
+        },
+        "url": {
+          "en-US": "https://medium.com/@emasuriano"
+        },
+        "fontAwesomeIcon": {
+          "en-US": "medium"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "4SrlLN9bt6Yew2UyGgM06a",
+        "type": "Entry",
+        "createdAt": "2020-06-05T19:58:38.183Z",
+        "updatedAt": "2020-06-07T15:01:27.159Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 31,
+        "publishedAt": "2020-06-07T15:01:27.159Z",
+        "firstPublishedAt": "2020-06-05T19:58:39.182Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 16,
+        "version": 32,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "socialLink"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Github"
+        },
+        "url": {
+          "en-US": "https://github.com/EmaSuriano/gatsby-starter-mate/blob/master/README.md"
+        },
+        "fontAwesomeIcon": {
+          "en-US": "github"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "4J6WFTjoMUCmQKuKAaOsqE",
+        "type": "Entry",
+        "createdAt": "2020-06-05T19:58:38.318Z",
+        "updatedAt": "2020-06-07T15:01:26.634Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 31,
+        "publishedAt": "2020-06-07T15:01:26.634Z",
+        "firstPublishedAt": "2020-06-05T19:58:39.834Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 16,
+        "version": 32,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1241,6 +2544,1220 @@
           "en-US": "twitter"
         }
       }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "5Jm85WP1Bevtpd0adbHdbJ",
+        "type": "Entry",
+        "createdAt": "2020-06-06T04:32:51.470Z",
+        "updatedAt": "2020-06-07T15:01:25.933Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 33,
+        "publishedAt": "2020-06-07T15:01:25.933Z",
+        "firstPublishedAt": "2020-06-06T04:35:44.095Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 14,
+        "version": 34,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "featured"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Paramos ,pero sólo por un rato"
+        },
+        "text": {
+          "en-US": "Cuando termine esto vamos a volver a tocar,posta"
+        },
+        "photo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6TqyWYnJdYhMxLdvzodeRd"
+            }
+          }
+        },
+        "order": {
+          "en-US": 2
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "4ghHWmzBRFtV2EoOWGEDNu",
+        "type": "Entry",
+        "createdAt": "2020-06-06T23:20:37.660Z",
+        "updatedAt": "2020-06-07T15:01:25.430Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 33,
+        "publishedAt": "2020-06-07T15:01:25.430Z",
+        "firstPublishedAt": "2020-06-06T23:22:43.064Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 14,
+        "version": 34,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "concert"
+          }
+        }
+      },
+      "fields": {
+        "time": {
+          "en-US": "2020-08-11T22:00+00:00"
+        },
+        "place": {
+          "en-US": "Bar Mutar,Avellaneda"
+        },
+        "link": {
+          "en-US": "http://barmutar.com/"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "2bWt4SZYsq2vUkPsl0UmSf",
+        "type": "Entry",
+        "createdAt": "2020-06-06T23:22:53.239Z",
+        "updatedAt": "2020-06-07T15:01:24.847Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 32,
+        "publishedAt": "2020-06-07T15:01:24.847Z",
+        "firstPublishedAt": "2020-06-06T23:24:42.904Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 14,
+        "version": 33,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "concert"
+          }
+        }
+      },
+      "fields": {
+        "time": {
+          "en-US": "2020-08-21T21:00+00:00"
+        },
+        "place": {
+          "en-US": "The Roxy,Buenos Aires"
+        },
+        "link": {
+          "en-US": "http://www.theroxybar.com.ar/"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "76EfYVuRpJ0KPjfeFw6BdH",
+        "type": "Entry",
+        "createdAt": "2020-06-06T23:25:07.411Z",
+        "updatedAt": "2020-06-07T15:06:36.530Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 50,
+        "publishedAt": "2020-06-07T15:06:36.530Z",
+        "firstPublishedAt": "2020-06-06T23:46:10.127Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 14,
+        "version": 51,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "tour"
+          }
+        }
+      },
+      "fields": {
+        "message": {
+          "en-US": "Estos son nuestros próximos recitales,ojalá toquemos cerca tuyo"
+        },
+        "noConcertMessage": {
+          "en-US": "Por ahora no tenemos nada seguro,escribimos para arreglar algo"
+        },
+        "concerts": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2bWt4SZYsq2vUkPsl0UmSf"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4ghHWmzBRFtV2EoOWGEDNu"
+              }
+            }
+          ]
+        },
+        "photo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "33FyLstwMExWs0a79T8Bth"
+            }
+          }
+        },
+        "cancelledMessage": {
+          "en-US": "Cancelado"
+        },
+        "ticketsMessage": {
+          "en-US": "Compra tus entradas"
+        },
+        "noTIcketsMessage": {
+          "en-US": "Entradeas agotadas"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "5m3dpKgCYbpzsrYnf6cq6P",
+        "type": "Entry",
+        "createdAt": "2020-06-07T00:24:11.699Z",
+        "updatedAt": "2020-06-07T15:01:23.626Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 29,
+        "publishedAt": "2020-06-07T15:01:23.626Z",
+        "firstPublishedAt": "2020-06-07T00:24:26.638Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 14,
+        "version": 30,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "socialLink"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Spotify"
+        },
+        "url": {
+          "en-US": "https://open.spotify.com/artist/3Zr4IwjOMTKEyDhcR8BAVe"
+        },
+        "fontAwesomeIcon": {
+          "en-US": "spotify"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "3C8F1HWGm8RgQrjfwLGCYu",
+        "type": "Entry",
+        "createdAt": "2020-06-07T00:24:38.042Z",
+        "updatedAt": "2020-06-07T15:01:23.121Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 29,
+        "publishedAt": "2020-06-07T15:01:23.121Z",
+        "firstPublishedAt": "2020-06-07T00:25:31.291Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 14,
+        "version": 30,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "socialLink"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Youtube"
+        },
+        "url": {
+          "en-US": "https://www.youtube.com/channel/UCo-SShcp_Gu0pOq_beZnGlg"
+        },
+        "fontAwesomeIcon": {
+          "en-US": "youtube"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "3YbAfkB1tnWCYi8gHmc4Fo",
+        "type": "Entry",
+        "createdAt": "2020-06-07T00:27:11.235Z",
+        "updatedAt": "2020-06-07T15:01:22.581Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 29,
+        "publishedAt": "2020-06-07T15:01:22.581Z",
+        "firstPublishedAt": "2020-06-07T00:27:32.754Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 14,
+        "version": 30,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "socialLink"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Facebook"
+        },
+        "url": {
+          "en-US": "https://www.facebook.com/ragazzas.oficial"
+        },
+        "fontAwesomeIcon": {
+          "en-US": "facebook"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "2RJ6dekpoxClP0kEvc3i2",
+        "type": "Entry",
+        "createdAt": "2020-06-07T00:28:20.639Z",
+        "updatedAt": "2020-06-07T15:01:21.995Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 33,
+        "publishedAt": "2020-06-07T15:01:21.995Z",
+        "firstPublishedAt": "2020-06-07T00:29:26.794Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 15,
+        "version": 34,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "socialLink"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Bandcamp"
+        },
+        "url": {
+          "en-US": "https://ragazzas.bandcamp.com/"
+        },
+        "fontAwesomeIcon": {
+          "en-US": "bandcamp"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "4rNJTqM3bI6y3BQFHpMZ2n",
+        "type": "Entry",
+        "createdAt": "2020-06-07T00:30:34.978Z",
+        "updatedAt": "2020-06-07T15:01:21.472Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 35,
+        "publishedAt": "2020-06-07T15:01:21.472Z",
+        "firstPublishedAt": "2020-06-07T00:39:03.217Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 14,
+        "version": 36,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "featured"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Somos Ragazzas"
+        },
+        "text": {
+          "en-US": "Descarga nuestros temas en BandCamp"
+        },
+        "photo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "15chilSTshlQkgdLt2mGmT"
+            }
+          }
+        },
+        "link": {
+          "en-US": "https://ragazzas.bandcamp.com/"
+        },
+        "linkText": {
+          "en-US": "Descargar"
+        },
+        "order": {
+          "en-US": 3
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "7miX1DlDUswhi7oibTN9ZX",
+        "type": "Entry",
+        "createdAt": "2020-06-07T00:58:05.078Z",
+        "updatedAt": "2020-06-07T15:01:17.516Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 32,
+        "publishedAt": "2020-06-07T15:01:17.516Z",
+        "firstPublishedAt": "2020-06-07T01:02:04.372Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 14,
+        "version": 33,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "member"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Rulli"
+        },
+        "role": {
+          "en-US": "Bateria"
+        },
+        "photo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "1eubFBtg35qW4dod8CvbYY"
+            }
+          }
+        },
+        "info": {
+          "en-US": {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "Él hace ritmo con las manos,los pies y partes del cuerpo que no existen,postix",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "socialLinks": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2ZePp7KrFfNa8XmB16k8dB"
+              }
+            }
+          ]
+        },
+        "order": {
+          "en-US": 3
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "2ZePp7KrFfNa8XmB16k8dB",
+        "type": "Entry",
+        "createdAt": "2020-06-07T01:01:39.358Z",
+        "updatedAt": "2020-06-07T15:01:20.840Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 33,
+        "publishedAt": "2020-06-07T15:01:20.840Z",
+        "firstPublishedAt": "2020-06-07T01:01:55.679Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 15,
+        "version": 34,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "socialLink"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Instagram de Rulli"
+        },
+        "url": {
+          "en-US": "https://www.instagram.com/rullix_/"
+        },
+        "fontAwesomeIcon": {
+          "en-US": "Instagram"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "2U3HnkdGxAkP8UaIo9MfSO",
+        "type": "Entry",
+        "createdAt": "2020-06-07T01:03:59.495Z",
+        "updatedAt": "2020-06-07T15:01:18.028Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 34,
+        "publishedAt": "2020-06-07T15:01:18.028Z",
+        "firstPublishedAt": "2020-06-07T01:08:36.347Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 14,
+        "version": 35,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "member"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Joel"
+        },
+        "role": {
+          "en-US": "Voz"
+        },
+        "photo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "1D5x09EL7sz0ALshw9xjQc"
+            }
+          }
+        },
+        "info": {
+          "en-US": {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "El hombre de los mil nombres pero sólo voy a poner uno,no encontre su insta\n\n",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "socialLinks": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5ekX36VUHxcEI9k7ZRdz9R"
+              }
+            }
+          ]
+        },
+        "order": {
+          "en-US": 2
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "5ekX36VUHxcEI9k7ZRdz9R",
+        "type": "Entry",
+        "createdAt": "2020-06-07T01:05:39.688Z",
+        "updatedAt": "2020-06-07T15:01:20.363Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 30,
+        "publishedAt": "2020-06-07T15:01:20.363Z",
+        "firstPublishedAt": "2020-06-07T01:08:17.969Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 14,
+        "version": 31,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "socialLink"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Instagram de Joel"
+        },
+        "url": {
+          "en-US": "https://www.instagram.com/apuradisimo/"
+        },
+        "fontAwesomeIcon": {
+          "en-US": "instagram"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "4o8lLamDZFfQQyEkkiYvMM",
+        "type": "Entry",
+        "createdAt": "2020-06-07T01:08:59.477Z",
+        "updatedAt": "2020-06-07T15:01:18.571Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 32,
+        "publishedAt": "2020-06-07T15:01:18.571Z",
+        "firstPublishedAt": "2020-06-07T01:10:49.019Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 14,
+        "version": 33,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "album"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Pelea"
+        },
+        "year": {
+          "en-US": "2019-12-10T00:00-03:00"
+        },
+        "photo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4mh5p5XnCYj5gTJQd3FzuV"
+            }
+          }
+        },
+        "description": {
+          "en-US": "Nuestro nuevo eppp"
+        },
+        "playlist": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "rxdxTiQ7utAd5551NCUPo"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "rxdxTiQ7utAd5551NCUPo",
+        "type": "Entry",
+        "createdAt": "2020-06-07T01:10:23.046Z",
+        "updatedAt": "2020-06-07T15:01:19.809Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 31,
+        "publishedAt": "2020-06-07T15:01:19.809Z",
+        "firstPublishedAt": "2020-06-07T01:10:40.059Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 15,
+        "version": 32,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "playlist"
+          }
+        }
+      },
+      "fields": {
+        "nombre": {
+          "en-US": "Pelea"
+        },
+        "linkPlaylist": {
+          "en-US": "https://open.spotify.com/embed/album/747vBQnGQ0TknTHg8rteGq"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "77AqadhqIKzNWsvV7o5m7Z",
+        "type": "Entry",
+        "createdAt": "2020-06-07T13:03:26.285Z",
+        "updatedAt": "2020-06-07T15:01:19.084Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 20,
+        "publishedAt": "2020-06-07T15:01:19.084Z",
+        "firstPublishedAt": "2020-06-07T13:08:12.529Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 6,
+        "version": 21,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "concert"
+          }
+        }
+      },
+      "fields": {
+        "time": {
+          "en-US": "2020-12-13T14:00+00:00"
+        },
+        "place": {
+          "en-US": "Budokan,Tokyo"
+        },
+        "link": {
+          "en-US": "https://eventseeker.com/venue/41999-nippon-budokan-tokyo"
+        },
+        "cancelled": {
+          "en-US": true
+        },
+        "message": {
+          "en-US": "Cancelado por lluvia"
+        }
+      }
     }
   ],
   "assets": [
@@ -1250,13 +3767,13 @@
           "sys": {
             "type": "Link",
             "linkType": "Space",
-            "id": "ntiequ7mc6q6"
+            "id": "zlzjaasypn6d"
           }
         },
-        "id": "3AorRmtWOsGQ4o8gK0YWKG",
+        "id": "1XlY4vlIHs6upuLO3TWMF5",
         "type": "Asset",
-        "createdAt": "2018-09-08T08:26:24.437Z",
-        "updatedAt": "2018-09-23T09:26:16.789Z",
+        "createdAt": "2020-06-05T15:05:13.182Z",
+        "updatedAt": "2020-06-07T15:01:04.354Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1264,262 +3781,731 @@
             "linkType": "Environment"
           }
         },
+        "publishedVersion": 51,
+        "publishedAt": "2020-06-07T15:01:04.354Z",
+        "firstPublishedAt": "2020-06-05T15:09:43.810Z",
         "createdBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
+            "id": "5CXTyPMzRBDC02whZAkrxn"
           }
         },
         "updatedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 16,
+        "version": 52,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Amor o muerte"
+        },
+        "description": {
+          "en-US": "Portada amor o muerte"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/zlzjaasypn6d/1XlY4vlIHs6upuLO3TWMF5/f798fbbb3b8276d55835e9299fdbaddf/ab67616d0000b273f5bd35e8254779777af74679.jpg",
+            "details": {
+              "size": 222089,
+              "image": {
+                "width": 640,
+                "height": 640
+              }
+            },
+            "fileName": "ab67616d0000b273f5bd35e8254779777af74679.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "pp5QQm6NWvAGOqyt6tELG",
+        "type": "Asset",
+        "createdAt": "2020-06-05T17:27:43.803Z",
+        "updatedAt": "2020-06-07T15:01:11.368Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 49,
+        "publishedAt": "2020-06-07T15:01:11.368Z",
+        "firstPublishedAt": "2020-06-05T17:30:40.118Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 16,
+        "version": 50,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Foto Fran"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/zlzjaasypn6d/pp5QQm6NWvAGOqyt6tELG/55593b22437ca594dd1fb95832aeea38/11041038_10154171108366124_8845942224759445213_o.jpg",
+            "details": {
+              "size": 257444,
+              "image": {
+                "width": 2048,
+                "height": 1364
+              }
+            },
+            "fileName": "11041038_10154171108366124_8845942224759445213_o.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "4mh5p5XnCYj5gTJQd3FzuV",
+        "type": "Asset",
+        "createdAt": "2020-06-05T17:35:07.765Z",
+        "updatedAt": "2020-06-07T15:01:10.596Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 50,
+        "publishedAt": "2020-06-07T15:01:10.596Z",
+        "firstPublishedAt": "2020-06-05T17:36:15.256Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 16,
+        "version": 51,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "pelea portada"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/zlzjaasypn6d/4mh5p5XnCYj5gTJQd3FzuV/6bdaad0239079dd19476aad2c8a6a927/58917082_10158355060516124_7739273992124497920_o.jpg",
+            "details": {
+              "size": 106302,
+              "image": {
+                "width": 960,
+                "height": 960
+              }
+            },
+            "fileName": "58917082_10158355060516124_7739273992124497920_o.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "77zKKS10lcdVx6N5QGyp47",
+        "type": "Asset",
+        "createdAt": "2020-06-05T17:47:47.673Z",
+        "updatedAt": "2020-06-07T15:01:10.173Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 53,
+        "publishedAt": "2020-06-07T15:01:10.173Z",
+        "firstPublishedAt": "2020-06-05T17:48:41.721Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 17,
+        "version": 54,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Logo"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/zlzjaasypn6d/77zKKS10lcdVx6N5QGyp47/e07608513abc2241a9decab126d0d761/0017053361_100-removebg-preview.png",
+            "details": {
+              "size": 45130,
+              "image": {
+                "width": 975,
+                "height": 180
+              }
+            },
+            "fileName": "0017053361_100-removebg-preview.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "1BilhzwBdVqEEY8Rw59M5P",
+        "type": "Asset",
+        "createdAt": "2020-06-05T18:51:14.647Z",
+        "updatedAt": "2020-06-07T15:01:09.734Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 49,
+        "publishedAt": "2020-06-07T15:01:09.734Z",
+        "firstPublishedAt": "2020-06-05T18:52:29.553Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 16,
+        "version": 50,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Ragazzas"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/zlzjaasypn6d/1BilhzwBdVqEEY8Rw59M5P/123a6f2b68ebf544459d4fdfb4030939/31237765_10157315044771124_4651564922914734080_n.jpg",
+            "details": {
+              "size": 64012,
+              "image": {
+                "width": 640,
+                "height": 638
+              }
+            },
+            "fileName": "31237765_10157315044771124_4651564922914734080_n.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "6TqyWYnJdYhMxLdvzodeRd",
+        "type": "Asset",
+        "createdAt": "2020-06-06T04:33:47.282Z",
+        "updatedAt": "2020-06-07T15:01:09.290Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 45,
+        "publishedAt": "2020-06-07T15:01:09.290Z",
+        "firstPublishedAt": "2020-06-06T04:34:59.057Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 14,
+        "version": 46,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "corriendo"
+        },
+        "description": {
+          "en-US": "corriendo en el horizonte"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/zlzjaasypn6d/6TqyWYnJdYhMxLdvzodeRd/9b81f54967a0cd9d833a356b346b2e18/12239343_10154272771726124_3540800827595662702_o.jpg",
+            "details": {
+              "size": 162617,
+              "image": {
+                "width": 1200,
+                "height": 800
+              }
+            },
+            "fileName": "12239343_10154272771726124_3540800827595662702_o.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "33FyLstwMExWs0a79T8Bth",
+        "type": "Asset",
+        "createdAt": "2020-06-06T23:26:45.050Z",
+        "updatedAt": "2020-06-07T15:01:08.620Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 44,
+        "publishedAt": "2020-06-07T15:01:08.620Z",
+        "firstPublishedAt": "2020-06-06T23:43:13.206Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 14,
+        "version": 45,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "tour"
+        },
+        "description": {
+          "en-US": "tour photo"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/zlzjaasypn6d/33FyLstwMExWs0a79T8Bth/70781cf53be96bb41527b50c6be5eb75/12512273_10154514184906124_6682045590835494739_n.jpg",
+            "details": {
+              "size": 49544,
+              "image": {
+                "width": 640,
+                "height": 640
+              }
+            },
+            "fileName": "12512273_10154514184906124_6682045590835494739_n.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "15chilSTshlQkgdLt2mGmT",
+        "type": "Asset",
+        "createdAt": "2020-06-07T00:35:14.922Z",
+        "updatedAt": "2020-06-07T15:01:08.190Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 49,
+        "publishedAt": "2020-06-07T15:01:08.190Z",
+        "firstPublishedAt": "2020-06-07T00:37:13.787Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 14,
+        "version": 50,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Somos"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/zlzjaasypn6d/15chilSTshlQkgdLt2mGmT/fa92eac100b96f2c7e6456ef98526a2c/28234944_10157110984356124_2711084222899218714_o.jpg",
+            "details": {
+              "size": 284864,
+              "image": {
+                "width": 1875,
+                "height": 1250
+              }
+            },
+            "fileName": "28234944_10157110984356124_2711084222899218714_o.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "1eubFBtg35qW4dod8CvbYY",
+        "type": "Asset",
+        "createdAt": "2020-06-07T00:58:17.013Z",
+        "updatedAt": "2020-06-07T15:01:07.544Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 48,
+        "publishedAt": "2020-06-07T15:01:07.544Z",
+        "firstPublishedAt": "2020-06-07T01:00:57.851Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 14,
+        "version": 49,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Rulli"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/zlzjaasypn6d/1eubFBtg35qW4dod8CvbYY/61735750a9e0604690a9098bacddbef1/66380263_10158563997811124_2479920812564414464_n.jpg",
+            "details": {
+              "size": 129317,
+              "image": {
+                "width": 566,
+                "height": 566
+              }
+            },
+            "fileName": "66380263_10158563997811124_2479920812564414464_n.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "1D5x09EL7sz0ALshw9xjQc",
+        "type": "Asset",
+        "createdAt": "2020-06-07T01:04:23.059Z",
+        "updatedAt": "2020-06-07T15:01:07.134Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 44,
+        "publishedAt": "2020-06-07T15:01:07.134Z",
+        "firstPublishedAt": "2020-06-07T01:04:56.243Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "publishedCounter": 14,
+        "version": 45,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Joel"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/zlzjaasypn6d/1D5x09EL7sz0ALshw9xjQc/6bb1468dce964bce9006b9529d76db98/14656408_10155320278171124_554609020870632661_n.jpg",
+            "details": {
+              "size": 64939,
+              "image": {
+                "width": 960,
+                "height": 640
+              }
+            },
+            "fileName": "14656408_10155320278171124_554609020870632661_n.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zlzjaasypn6d"
+          }
+        },
+        "id": "7fpSaBgTZnBwVtxVPKwwjj",
+        "type": "Asset",
+        "createdAt": "2020-06-07T14:48:45.433Z",
+        "updatedAt": "2020-06-07T15:01:04.780Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2020-06-07T15:01:04.780Z",
+        "firstPublishedAt": "2020-06-07T14:49:57.313Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5CXTyPMzRBDC02whZAkrxn"
           }
         },
         "publishedCounter": 2,
-        "version": 27,
+        "version": 10,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
-          }
-        },
-        "publishedVersion": 26,
-        "firstPublishedAt": "2018-09-08T08:29:51.622Z",
-        "publishedAt": "2018-09-23T09:26:16.789Z"
-      },
-      "fields": {
-        "title": {
-          "en-US": "Google Logo"
-        },
-        "description": {
-          "en-US": "Logo from Google"
-        },
-        "file": {
-          "en-US": {
-            "url": "//images.ctfassets.net/ntiequ7mc6q6/3AorRmtWOsGQ4o8gK0YWKG/bafdc9f6551a2b487fe0126158630b27/google_PNG19630.png",
-            "details": {
-              "size": 39228,
-              "image": {
-                "width": 1000,
-                "height": 1000
-              }
-            },
-            "fileName": "google_PNG19630.png",
-            "contentType": "image/png"
+            "id": "5CXTyPMzRBDC02whZAkrxn"
           }
         }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "ntiequ7mc6q6"
-          }
-        },
-        "id": "6rkOXCpyvuekYIgy6U6gGu",
-        "type": "Asset",
-        "createdAt": "2018-09-08T09:32:36.676Z",
-        "updatedAt": "2018-09-08T09:33:34.682Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 15,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
-          }
-        },
-        "publishedVersion": 14,
-        "firstPublishedAt": "2018-09-08T09:33:34.682Z",
-        "publishedAt": "2018-09-08T09:33:34.682Z"
       },
       "fields": {
         "title": {
-          "en-US": "Gatsby logo"
+          "en-US": "auto flashero"
         },
         "description": {
-          "en-US": "Gatsby logo"
+          "en-US": "auto flashero"
         },
         "file": {
           "en-US": {
-            "url": "//images.ctfassets.net/ntiequ7mc6q6/6rkOXCpyvuekYIgy6U6gGu/9369860d91a93b58c949fedfc8967703/1_t5EnAu3eSWJA0rmZ9v3xuw.png",
+            "url": "//images.ctfassets.net/zlzjaasypn6d/7fpSaBgTZnBwVtxVPKwwjj/d3e8ee62d2d0bb2401c036fbbde18130/12512273_10154514184906124_6682045590835494739_n.jpg",
             "details": {
-              "size": 111702,
+              "size": 49544,
               "image": {
-                "width": 1600,
-                "height": 1600
+                "width": 640,
+                "height": 640
               }
             },
-            "fileName": "1*t5EnAu3eSWJA0rmZ9v3xuw.png",
-            "contentType": "image/png"
-          }
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "ntiequ7mc6q6"
-          }
-        },
-        "id": "u3Um4zkMrAaQioyq4oSIW",
-        "type": "Asset",
-        "createdAt": "2018-09-08T09:36:25.346Z",
-        "updatedAt": "2018-09-08T09:36:43.100Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 14,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
-          }
-        },
-        "publishedVersion": 13,
-        "firstPublishedAt": "2018-09-08T09:36:43.100Z",
-        "publishedAt": "2018-09-08T09:36:43.100Z"
-      },
-      "fields": {
-        "title": {
-          "en-US": "Facebook logo"
-        },
-        "description": {
-          "en-US": "Facebook logo"
-        },
-        "file": {
-          "en-US": {
-            "url": "//images.ctfassets.net/ntiequ7mc6q6/u3Um4zkMrAaQioyq4oSIW/876e172d31bbc05ab2599e77188ea545/600px-Facebook_logo__28square_29.png",
-            "details": {
-              "size": 13209,
-              "image": {
-                "width": 600,
-                "height": 600
-              }
-            },
-            "fileName": "600px-Facebook_logo_%28square%29.png",
-            "contentType": "image/png"
-          }
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "ntiequ7mc6q6"
-          }
-        },
-        "id": "6nf3rNaaVaUqYcoAcciSeC",
-        "type": "Asset",
-        "createdAt": "2018-09-09T20:57:29.181Z",
-        "updatedAt": "2018-09-09T20:57:42.989Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 11,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
-          }
-        },
-        "publishedVersion": 10,
-        "firstPublishedAt": "2018-09-09T20:57:42.989Z",
-        "publishedAt": "2018-09-09T20:57:42.989Z"
-      },
-      "fields": {
-        "title": {
-          "en-US": "Mate Logo"
-        },
-        "description": {
-          "en-US": "Mate Logo"
-        },
-        "file": {
-          "en-US": {
-            "url": "//images.ctfassets.net/ntiequ7mc6q6/6nf3rNaaVaUqYcoAcciSeC/4433ecac61b8aa767edd9e11739bb30a/Mate_Logo.png",
-            "details": {
-              "size": 52527,
-              "image": {
-                "width": 946,
-                "height": 948
-              }
-            },
-            "fileName": "Mate Logo.png",
-            "contentType": "image/png"
+            "fileName": "12512273_10154514184906124_6682045590835494739_n.jpg",
+            "contentType": "image/jpeg"
           }
         }
       }
@@ -1536,13 +4522,13 @@
       "optional": false,
       "sys": {
         "type": "Locale",
-        "id": "0pUiiR5cRgkeh1qLZ5imRa",
+        "id": "0L10RoG4iwnBKcIfLtAsJi",
         "version": 1,
         "space": {
           "sys": {
             "type": "Link",
             "linkType": "Space",
-            "id": "ntiequ7mc6q6"
+            "id": "zlzjaasypn6d"
           }
         },
         "environment": {
@@ -1556,18 +4542,18 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
+            "id": "5CXTyPMzRBDC02whZAkrxn"
           }
         },
-        "createdAt": "2018-09-07T23:17:03Z",
+        "createdAt": "2020-06-05T14:52:27Z",
         "updatedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "2XGcyQ3vKgm55htxMAIqsM"
+            "id": "5CXTyPMzRBDC02whZAkrxn"
           }
         },
-        "updatedAt": "2018-09-07T23:17:03Z"
+        "updatedAt": "2020-06-05T14:52:27Z"
       }
     }
   ],

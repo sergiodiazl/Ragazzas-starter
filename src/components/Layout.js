@@ -8,12 +8,17 @@ import Helmet from './Helmet';
 
 const GlobalStyle = createGlobalStyle`
  
-
+  *{
+    
+    box-sizing: border-box; 
+    margin: 0;
+  }
   body {
     box-sizing: border-box; 
     margin: 0;
-    min-width:355px;
-    font-family: Cabin, 'Open Sans', sans-serif;
+
+    min-width:100vw;
+    font-family: Amatic SC,Cabin, 'Open Sans', sans-serif;
     font-display: swap;
     font-display: fallback;
     overflow-x: hidden;
@@ -38,7 +43,7 @@ const Layout = ({ children }) => {
   return (
     <main>
       <GlobalStyle />
-      <ThemeProvider theme={theme }>
+      <ThemeProvider theme={theme}>
         <ScrollingProvider>
           <Helmet />
           {children}

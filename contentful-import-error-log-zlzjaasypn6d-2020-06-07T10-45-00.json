@@ -1,0 +1,517 @@
+[
+  {
+    "ts": "2020-06-07T13:45:43.858Z",
+    "level": "error",
+    "error": {
+      "name": "BadRequest",
+      "entity": {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "zlzjaasypn6d"
+            }
+          },
+          "id": "tour",
+          "type": "ContentType",
+          "createdAt": "2020-06-06T23:18:17.840Z",
+          "updatedAt": "2020-06-07T01:12:09.890Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 17,
+          "publishedAt": "2020-06-07T01:12:09.890Z",
+          "firstPublishedAt": "2020-06-06T23:18:18.673Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "5CXTyPMzRBDC02whZAkrxn"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "5CXTyPMzRBDC02whZAkrxn"
+            }
+          },
+          "publishedCounter": 9,
+          "version": 18,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "5CXTyPMzRBDC02whZAkrxn"
+            }
+          }
+        },
+        "displayField": "message",
+        "name": "Tour",
+        "description": "Datos de la gira",
+        "fields": [
+          {
+            "id": "message",
+            "name": "Message",
+            "type": "Symbol",
+            "localized": false,
+            "required": true,
+            "validations": [],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "noConcertMessage",
+            "name": "NoConcertMessage",
+            "type": "Symbol",
+            "localized": false,
+            "required": true,
+            "validations": [],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "concerts",
+            "name": "Concerts",
+            "type": "Array",
+            "localized": false,
+            "required": false,
+            "validations": [],
+            "disabled": false,
+            "omitted": false,
+            "items": {
+              "type": "Link",
+              "validations": [],
+              "linkType": "Entry"
+            }
+          },
+          {
+            "id": "photo",
+            "name": "Photo",
+            "type": "Link",
+            "localized": false,
+            "required": false,
+            "validations": [],
+            "disabled": false,
+            "omitted": false,
+            "linkType": "Asset"
+          },
+          {
+            "id": "cancelledMessage",
+            "name": "CancelledMessage",
+            "type": "Symbol",
+            "localized": false,
+            "required": true,
+            "validations": [],
+            "disabled": false,
+            "omitted": false
+          }
+        ]
+      },
+      "data": {
+        "status": 400,
+        "statusText": "Bad Request",
+        "message": "You need to omit a field before deleting it",
+        "details": {},
+        "request": {
+          "url": "https://api.contentful.com:443/spaces/zlzjaasypn6d/environments/master/content_types/tour",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.import/7.6.2; feature library-import; sdk contentful-management.js/5.12.0; platform node.js/v10.16.0; os Windows/10.0.18363;",
+            "Authorization": "Bearer ...c2frM",
+            "user-agent": "node.js/v10.16.0",
+            "Accept-Encoding": "gzip",
+            "X-Contentful-Version": 32,
+            "Content-Length": 866
+          },
+          "method": "put",
+          "payloadData": "{\"displayField\":\"message\",\"name\":\"Tour\",\"description\":\"Datos de la gira\",\"fields\":[{\"id\":\"message\",\"name\":\"Message\",\"type\":\"Symbol\",\"localized\":false,\"required\":true,\"validations\":[],\"disabled\":false,\"omitted\":false},{\"id\":\"noConcertMessage\",\"name\":\"NoConcertMessage\",\"type\":\"Symbol\",\"localized\":false,\"required\":true,\"validations\":[],\"disabled\":false,\"omitted\":false},{\"id\":\"concerts\",\"name\":\"Concerts\",\"type\":\"Array\",\"localized\":false,\"required\":false,\"validations\":[],\"disabled\":false,\"omitted\":false,\"items\":{\"type\":\"Link\",\"validations\":[],\"linkType\":\"Entry\"}},{\"id\":\"photo\",\"name\":\"Photo\",\"type\":\"Link\",\"localized\":false,\"required\":false,\"validations\":[],\"disabled\":false,\"omitted\":false,\"linkType\":\"Asset\"},{\"id\":\"cancelledMessage\",\"name\":\"CancelledMessage\",\"type\":\"Symbol\",\"localized\":false,\"required\":true,\"validations\":[],\"disabled\":false,\"omitted\":false}]}"
+        },
+        "requestId": "0523c5c0f9cacb7d6339e3965ce05767"
+      }
+    }
+  },
+  {
+    "ts": "2020-06-07T13:45:43.878Z",
+    "level": "error",
+    "error": {
+      "name": "BadRequest",
+      "entity": {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "zlzjaasypn6d"
+            }
+          },
+          "id": "concert",
+          "type": "ContentType",
+          "createdAt": "2020-06-06T23:17:01.065Z",
+          "updatedAt": "2020-06-06T23:45:16.305Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 5,
+          "publishedAt": "2020-06-06T23:45:16.305Z",
+          "firstPublishedAt": "2020-06-06T23:17:01.981Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "5CXTyPMzRBDC02whZAkrxn"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "5CXTyPMzRBDC02whZAkrxn"
+            }
+          },
+          "publishedCounter": 3,
+          "version": 6,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "5CXTyPMzRBDC02whZAkrxn"
+            }
+          }
+        },
+        "displayField": "place",
+        "name": "Concert",
+        "description": "Proximos conciertos",
+        "fields": [
+          {
+            "id": "time",
+            "name": "time",
+            "type": "Date",
+            "localized": false,
+            "required": true,
+            "validations": [],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "place",
+            "name": "place",
+            "type": "Symbol",
+            "localized": false,
+            "required": true,
+            "validations": [],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "link",
+            "name": "link",
+            "type": "Symbol",
+            "localized": false,
+            "required": false,
+            "validations": [],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "cancelled",
+            "name": "cancelled",
+            "type": "Boolean",
+            "localized": false,
+            "required": false,
+            "validations": [],
+            "disabled": false,
+            "omitted": false
+          }
+        ]
+      },
+      "data": {
+        "status": 400,
+        "statusText": "Bad Request",
+        "message": "You need to omit a field before deleting it",
+        "details": {},
+        "request": {
+          "url": "https://api.contentful.com:443/spaces/zlzjaasypn6d/environments/master/content_types/concert",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.import/7.6.2; feature library-import; sdk contentful-management.js/5.12.0; platform node.js/v10.16.0; os Windows/10.0.18363;",
+            "Authorization": "Bearer ...c2frM",
+            "user-agent": "node.js/v10.16.0",
+            "Accept-Encoding": "gzip",
+            "X-Contentful-Version": 20,
+            "Content-Length": 613
+          },
+          "method": "put",
+          "payloadData": "{\"displayField\":\"place\",\"name\":\"Concert\",\"description\":\"Proximos conciertos\",\"fields\":[{\"id\":\"time\",\"name\":\"time\",\"type\":\"Date\",\"localized\":false,\"required\":true,\"validations\":[],\"disabled\":false,\"omitted\":false},{\"id\":\"place\",\"name\":\"place\",\"type\":\"Symbol\",\"localized\":false,\"required\":true,\"validations\":[],\"disabled\":false,\"omitted\":false},{\"id\":\"link\",\"name\":\"link\",\"type\":\"Symbol\",\"localized\":false,\"required\":false,\"validations\":[],\"disabled\":false,\"omitted\":false},{\"id\":\"cancelled\",\"name\":\"cancelled\",\"type\":\"Boolean\",\"localized\":false,\"required\":false,\"validations\":[],\"disabled\":false,\"omitted\":false}]}"
+        },
+        "requestId": "9a6d707dc63557f039acfdedb7d907ae"
+      }
+    }
+  },
+  {
+    "ts": "2020-06-07T13:46:08.982Z",
+    "level": "error",
+    "error": {
+      "name": "InvalidEntry",
+      "entity": {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "zlzjaasypn6d"
+            }
+          },
+          "id": "76EfYVuRpJ0KPjfeFw6BdH",
+          "type": "Entry",
+          "createdAt": "2020-06-06T23:25:07.411Z",
+          "updatedAt": "2020-06-07T13:45:58.039Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 28,
+          "publishedAt": "2020-06-07T12:59:58.502Z",
+          "firstPublishedAt": "2020-06-06T23:46:10.127Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "5CXTyPMzRBDC02whZAkrxn"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "5CXTyPMzRBDC02whZAkrxn"
+            }
+          },
+          "publishedCounter": 7,
+          "version": 33,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "5CXTyPMzRBDC02whZAkrxn"
+            }
+          },
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "tour"
+            }
+          }
+        },
+        "fields": {
+          "message": {
+            "en-US": "Estos son nuestros próximos recitales,ojalá toquemos cerca tuyo"
+          },
+          "noConcertMessage": {
+            "en-US": "Por ahora no tenemos nada seguro,escribimos para arreglar algo"
+          },
+          "concerts": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "2bWt4SZYsq2vUkPsl0UmSf"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "4ghHWmzBRFtV2EoOWGEDNu"
+                }
+              }
+            ]
+          },
+          "cancelledMessage": {
+            "en-US": "Cancelado"
+          }
+        }
+      },
+      "data": {
+        "status": 422,
+        "statusText": "Unprocessable Entity",
+        "message": "Validation error",
+        "details": {
+          "errors": [
+            {
+              "name": "required",
+              "path": ["fields", "ticketsMessage"],
+              "details": "The property \"ticketsMessage\" is required here"
+            },
+            {
+              "name": "required",
+              "path": ["fields", "noTIcketsMessage"],
+              "details": "The property \"noTIcketsMessage\" is required here"
+            }
+          ]
+        },
+        "request": {
+          "url": "https://api.contentful.com:443/spaces/zlzjaasypn6d/environments/master/entries/76EfYVuRpJ0KPjfeFw6BdH/published",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.import/7.6.2; feature library-import; sdk contentful-management.js/5.12.0; platform node.js/v10.16.0; os Windows/10.0.18363;",
+            "Authorization": "Bearer ...c2frM",
+            "user-agent": "node.js/v10.16.0",
+            "Accept-Encoding": "gzip",
+            "X-Contentful-Version": 33
+          },
+          "method": "put",
+          "payloadData": null
+        },
+        "requestId": "7de687ddeb75889d2046853295dd6ab3"
+      }
+    }
+  },
+  {
+    "ts": "2020-06-07T13:46:15.009Z",
+    "level": "error",
+    "error": {
+      "name": "InvalidEntry",
+      "entity": {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "zlzjaasypn6d"
+            }
+          },
+          "id": "76EfYVuRpJ0KPjfeFw6BdH",
+          "type": "Entry",
+          "createdAt": "2020-06-06T23:25:07.411Z",
+          "updatedAt": "2020-06-07T13:45:58.039Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 28,
+          "publishedAt": "2020-06-07T12:59:58.502Z",
+          "firstPublishedAt": "2020-06-06T23:46:10.127Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "5CXTyPMzRBDC02whZAkrxn"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "5CXTyPMzRBDC02whZAkrxn"
+            }
+          },
+          "publishedCounter": 7,
+          "version": 33,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "5CXTyPMzRBDC02whZAkrxn"
+            }
+          },
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "tour"
+            }
+          }
+        },
+        "fields": {
+          "message": {
+            "en-US": "Estos son nuestros próximos recitales,ojalá toquemos cerca tuyo"
+          },
+          "noConcertMessage": {
+            "en-US": "Por ahora no tenemos nada seguro,escribimos para arreglar algo"
+          },
+          "concerts": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "2bWt4SZYsq2vUkPsl0UmSf"
+                }
+              },
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "4ghHWmzBRFtV2EoOWGEDNu"
+                }
+              }
+            ]
+          },
+          "cancelledMessage": {
+            "en-US": "Cancelado"
+          }
+        }
+      },
+      "data": {
+        "status": 422,
+        "statusText": "Unprocessable Entity",
+        "message": "Validation error",
+        "details": {
+          "errors": [
+            {
+              "name": "required",
+              "path": ["fields", "ticketsMessage"],
+              "details": "The property \"ticketsMessage\" is required here"
+            },
+            {
+              "name": "required",
+              "path": ["fields", "noTIcketsMessage"],
+              "details": "The property \"noTIcketsMessage\" is required here"
+            }
+          ]
+        },
+        "request": {
+          "url": "https://api.contentful.com:443/spaces/zlzjaasypn6d/environments/master/entries/76EfYVuRpJ0KPjfeFw6BdH/published",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.import/7.6.2; feature library-import; sdk contentful-management.js/5.12.0; platform node.js/v10.16.0; os Windows/10.0.18363;",
+            "Authorization": "Bearer ...c2frM",
+            "user-agent": "node.js/v10.16.0",
+            "Accept-Encoding": "gzip",
+            "X-Contentful-Version": 33
+          },
+          "method": "put",
+          "payloadData": null
+        },
+        "requestId": "57f9ae130364c364f95bfa300951698f"
+      }
+    }
+  },
+  {
+    "ts": "2020-06-07T13:46:15.009Z",
+    "level": "error",
+    "error": "Could not publish the following entities: 76EfYVuRpJ0KPjfeFw6BdH"
+  }
+]
