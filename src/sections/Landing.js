@@ -1,87 +1,122 @@
-import React, { Fragment, useState, useEffect } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import React, { Fragment } from 'react';
+import { StaticQuery, graphql } from 'gatsby';
 import { Heading, Flex, Box, Text } from 'rebass';
-import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
+import TextLoop from 'react-text-loop';
 import { SectionLink } from 'react-scroll-section';
-
-import styled from 'styled-components';
 import Section from '../components/Section';
-import Featured, { DefaultFeatured } from '../components/Featured';
-const CarouselContainer = styled(Carousel)`
-  width: 100%;
-  margin-top: 10vh;
-  height: 90vh;
-  & .carousel {
-    height: 100%;
-  }
-  & .slider-wrapper,
-  & .slider {
-    height: 100%;
-  }
-  &.carousel .control-arrow,
-  .carousel.carousel-slider .control-arrow {
-    z-index: 1;
-    width: 10%;
-  }
-`;
+import SocialLink from '../components/SocialLink';
+import MouseIcon from '../components/MouseIcon';
+import Triangle from '../components/Triangle';
 
-const featuredContent = () => {
-  const featuredData = useStaticQuery(graphql`
-    query FeaturedQuery {
-      allContentfulFeatured(sort: { fields: order }) {
-        edges {
-          node {
-            id
-            title
-            order
-            linkText
-            link
-            text {
-              text
+const Background = () => (
+  <div>
+    <Triangle
+      color="backgroundDark"
+      height={['35vh', '80vh']}
+      width={['95vw', '60vw']}
+    />
+
+    <Triangle
+      color="secondary"
+      height={['38vh', '80vh']}
+      width={['50vw', '35vw']}
+    />
+
+    <Triangle
+      color="primaryDark"
+      height={['25vh', '35vh']}
+      width={['75vw', '60vw']}
+      invertX
+    />
+
+    <Triangle
+      color="backgroundDark"
+      height={['20vh', '20vh']}
+      width={['100vw', '100vw']}
+      invertX
+      invertY
+    />
+  </div>
+);
+
+const centerHorizontally = { marginRight: 'auto', marginLeft: 'auto' };
+
+const LandingPage = () => (
+  <Section.Container id="home" Background={Background}>
+    <StaticQuery
+      query={graphql`
+        query SiteTitleQuery {
+          contentfulAbout {
+            name
+            roles
+            socialLinks {
+              id
+              url
+              name
+              fontAwesomeIcon
+              iconType
             }
-            photo {
-              fixed(width: 2000, quality: 100) {
-                width
-                src
-                srcSet
-                height
-              }
+          }
+          site {
+            siteMetadata {
+              deterministicBehaviour
             }
           }
         }
-      }
-    }
-  `);
-  const featuredArray = featuredData.allContentfulFeatured.edges.map(
-    item => item.node,
-  );
-  return featuredArray;
-};
-const LandingPage = () => {
-  const bgTest =
-    'http://images.ctfassets.net/zlzjaasypn6d/4mh5p5XnCYj5gTJQd3FzuV/db67e5c024f10cd1488c07c42d3c035a/58917082_10158355060516124_7739273992124497920_o.jpg';
+      `}
+      render={({ contentfulAbout, site }) => {
+        const { name, socialLinks, roles } = contentfulAbout;
+        const { deterministicBehaviour } = site.siteMetadata;
 
-  const [bgImg, setBgImg] = useState(bgTest);
+        return (
+          <Fragment>
+            <Heading
+              textAlign="center"
+              as="h1"
+              color="primary"
+              fontSize={[5, 6, 8]}
+              mt={[100,175,200]}
+              mb={[3, 4, 5]}
+            >
+              {`Hello, I'm ${name}!`}
+            </Heading>
 
-  useEffect(() => {
-    return () => {};
-  }, [bgImg]);
-  return (
-    <Section.Container id="home" padding="0">
-      <CarouselContainer
-        stopOnHover
-        useKeyboardArrows
-        showThumbs={false}
-        showStatus={false}
-        bgImg={bgImg}
-      >
-        {featuredContent().map(node => (
-          <Featured key={node.id} node={node} />
-        ))}
-      </CarouselContainer>
-    </Section.Container>
-  );
-};
+            <Heading
+              as="h2"
+              color="primary"
+              fontSize={[4, 5, 6]}
+              mb={[3, 5]}
+              textAlign="center"
+              style={centerHorizontally}
+            >
+              <TextLoop interval={3000}>
+                {roles
+                  .sort(() => deterministicBehaviour || Math.random() - 0.5)
+                  .map(text => (
+                    <Text width={[300, 500]} key={text}>
+                      {text}
+                    </Text>
+                  ))}
+              </TextLoop>
+            </Heading>
+
+            <Flex alignItems="center" justifyContent="center" flexWrap="wrap">
+              {socialLinks.map(({ id, ...rest }) => (
+                <Box mx={3} fontSize={[5, 6, 6]} key={id}>
+                  <SocialLink {...rest} />
+                </Box>
+              ))}
+            </Flex>
+            <Box my={4}>
+            <SectionLink section="about">
+              {({ onClick }) => <MouseIcon onClick={onClick} />}
+            </SectionLink>
+            </Box>
+          </Fragment>
+        );
+      }}
+    />
+  </Section.Container>
+);
 
 export default LandingPage;

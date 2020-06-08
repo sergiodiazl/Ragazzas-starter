@@ -6,18 +6,18 @@ import Fade from 'react-reveal/Fade';
 import SocialLink from './SocialLink';
 
 const FooterContainer = styled.div`
-  width: 100%;
+  min-width: 320px;
+  max-width: 1366px;
   display: flex;
   flex: 0 1 auto;
-  flex-wrap: wrap-reverse;
-  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   margin: auto;
 `;
 
 const TextFooter = styled(Text)`
   color: ${props => props.theme.colors.background};
-  font-family: Amatic SC, Cabin, 'Open Sans', sans-serif;
 
   & a {
     color: ${props => props.theme.colors.background};
@@ -30,55 +30,24 @@ const Footer = () => (
       query FooterQuery {
         contentfulAbout {
           name
+          roles
           socialLinks {
             id
             url
             name
             fontAwesomeIcon
+            iconType
           }
         }
       }
     `}
     render={data => {
       const { name, socialLinks } = data.contentfulAbout;
-      const year = new Date().getFullYear();
+
       return (
-        <Box py={3} backgroundColor="primaryDark" as="footer" width="100vw">
+        <Box p={3} backgroundColor="primaryDark" as="footer">
           <FooterContainer>
-            <TextFooter fontSize={[4, 6]}>
-              <Fade left>
-                <div>
-                  <span>{`${name} -${year} .Web by `}</span>
-
-                  <Link href="https://www.sergiodl.com/" mr={1}>
-                    Sergio DL
-                  </Link>
-                  <span role="img" aria-label="heart">
-                    ❤️
-                  </span>
-                </div>
-              </Fade>
-            </TextFooter>
-
-            <Flex flexWrap="wrap">
-              <Fade right>
-                {socialLinks.map(({ id, ...rest }) => (
-                  <Box mx={[2, 3]} fontSize={[4, 5]} key={id}>
-                    <SocialLink {...rest} color="background" />
-                  </Box>
-                ))}
-              </Fade>
-            </Flex>
-          </FooterContainer>
-        </Box>
-      );
-    }}
-  />
-);
-
-export default Footer;
-/*
- <Fade left>
+            <Fade left>
               <TextFooter fontSize={[2, 3]}>
                 <span>{`${name} - Powered by `}</span>
                 <Link href="https://www.gatsbyjs.org/">Gatsby</Link>
@@ -104,16 +73,11 @@ export default Footer;
                 ))}
               </Fade>
             </Flex>
+          </FooterContainer>
+        </Box>
+      );
+    }}
+  />
+);
 
-   <Flex  flexWrap='wrap'>
-              <Fade right>
-                {socialLinks.map(({ id, ...rest }) => (
-                  <Box mx={[2, 3]} fontSize={[4, 5]} key={id}>
-                    <SocialLink {...rest} color="background" />
-                  </Box>
-                ))}
-              </Fade>
-           
-            </Flex>  
-
-            */
+export default Footer;

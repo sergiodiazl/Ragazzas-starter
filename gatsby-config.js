@@ -9,13 +9,15 @@ const client = contentful.createClient({
   accessToken: ACCESS_TOKEN,
 });
 
+const getAboutEntry = entry => entry.sys.contentType.sys.id === 'about';
+
 const plugins = [
   'gatsby-plugin-react-helmet',
   {
     resolve: 'gatsby-plugin-web-font-loader',
     options: {
       google: {
-        families: ['Amatic SC', 'Cabin', 'Open Sans'],
+        families: ['Cabin', 'Open Sans'],
       },
     },
   },
@@ -35,7 +37,16 @@ const plugins = [
   'gatsby-plugin-offline',
 ];
 
-module.exports = client.getEntries().then(() => {
+module.exports = client.getEntries().then(entries => {
+  const { mediumUser } = entries.items.find(getAboutEntry).fields;
+
+  plugins.push({
+    resolve: 'gatsby-source-medium',
+    options: {
+      username: mediumUser || '@medium',
+    },
+  });
+
   if (ANALYTICS_ID) {
     plugins.push({
       resolve: 'gatsby-plugin-google-analytics',
@@ -47,6 +58,7 @@ module.exports = client.getEntries().then(() => {
 
   return {
     siteMetadata: {
+      isMediumUserDefined: !!mediumUser,
       deterministicBehaviour: !!DETERMINISTIC,
     },
     plugins,

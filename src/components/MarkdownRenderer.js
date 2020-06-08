@@ -1,14 +1,12 @@
 import React from 'react';
 import { SectionLink } from 'react-scroll-section';
 import styled from 'styled-components';
-
-import { Text, Link } from 'rebass';
 import PropTypes from 'prop-types';
 
-const StyledLink = styled(Link)`
+const StyledLink = styled.a`
   display: inline-block;
   transition: color 250ms, text-shadow 250ms;
-
+  color: black;
   cursor: pointer;
   position: relative;
   text-decoration: none;
@@ -36,8 +34,7 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const MarkdownParagraph = styled(Text)`
-  color: ${props => props.theme.colors.primary};
+const MarkdownParagraph = styled.p`
   line-height: 2em;
 
   &:first-child {
@@ -73,7 +70,7 @@ MarkdownLink.propTypes = {
 };
 
 export default {
-  paragraph: props => <MarkdownParagraph fontSize={[3, 4, 6]} {...props} />,
+  paragraph: props => <MarkdownParagraph {...props} />,
   list: props => <MarkdownList {...props} />,
   listItem: props => <MarkdownListItem {...props} />,
   link: MarkdownLink,
