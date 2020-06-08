@@ -29,11 +29,13 @@ const ConcertContainer = styled.div`
   }
 `;
 const TicketButton = styled(Link)`
-  display: block;
+  display: flex;
   color: ${props => props.theme.colors.primary};
   padding: 2%;
   width: 100%;
   height: 100%;
+  align-items: center;
+  justify-content: center;
   position: relative;
   border-radius: 15px;
   text-align: center;
@@ -65,13 +67,14 @@ const TicketButton = styled(Link)`
   }
 `;
 const NoTicketButton = styled.div`
-  display: block;
+  display: flex;
   color: ${props => props.theme.colors.primary};
   padding: 2%;
   width: 100%;
   height: 100%;
   border-radius: 15px;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
   position: relative;
   &::after {
     content: '';
@@ -152,14 +155,27 @@ const Concert = props => {
             alignContent="center"
             justifyContent="space-around"
           >
-            <Box width={[1, 1 / 2]}>
+            <Box
+              width={[1, 1 / 2]}
+              alignContent="center"
+              justifyContent="center"
+            >
               <Text color="primary">{place}</Text>
             </Box>
-            <Box width={[1, 1 / 2]}>
+            <Box
+              width={[1, 1 / 2]}
+              alignContent="center"
+              justifyContent="center"
+            >
               <Text color="primary">{time}</Text>
             </Box>
           </Flex>
-          <Flex width={[1 / 2, 1]} flexWrap="wrap">
+          <Flex
+            width={[1 / 2, 1]}
+            flexWrap="wrap"
+            alignContent="center"
+            justifyContent="center"
+          >
             <Box>
               <Text color="primary">{message}</Text>
             </Box>
