@@ -6,12 +6,11 @@ import Fade from 'react-reveal/Fade';
 import SocialLink from './SocialLink';
 
 const FooterContainer = styled.div`
-  min-width: 320px;
-  max-width: 1366px;
+  width:100%;
   display: flex;
   flex: 0 1 auto;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+  justify-content: space-evenly;
   align-items: center;
   margin: auto;
 `;
@@ -30,41 +29,39 @@ const Footer = () => (
       query FooterQuery {
         contentfulAbout {
           name
-          roles
+
           socialLinks {
             id
             url
             name
             fontAwesomeIcon
-            iconType
+           
           }
         }
       }
     `}
     render={data => {
       const { name, socialLinks } = data.contentfulAbout;
-
+      const year = new Date().getFullYear();
       return (
         <Box p={3} backgroundColor="primaryDark" as="footer">
-          <FooterContainer>
-            <Fade left>
-              <TextFooter fontSize={[2, 3]}>
-                <span>{`${name} - Powered by `}</span>
-                <Link href="https://www.gatsbyjs.org/">Gatsby</Link>
-                <span>, </span>
-                <Link href="https://www.contentful.com/" mr={1}>
-                  Contentful
-                </Link>
-                <span> and </span>
-                <Link href="https://www.netlify.com/" mr={1}>
-                  Netlify
-                </Link>
-                <span role="img" aria-label="heart">
-                  ❤️
-                </span>
-              </TextFooter>
-            </Fade>
-            <Flex>
+       <FooterContainer>
+            <TextFooter fontSize={[4, 6]}>
+              <Fade left>
+                <div>
+                  <span>{`${name} -${year} .Web by `}</span>
+
+                  <Link href="https://www.sergiodl.com/" mr={1}>
+                    Sergio DL
+                  </Link>
+                  <span role="img" aria-label="heart">
+                    ❤️
+                  </span>
+                </div>
+              </Fade>
+            </TextFooter>
+
+            <Flex flexWrap="wrap">
               <Fade right>
                 {socialLinks.map(({ id, ...rest }) => (
                   <Box mx={[2, 3]} fontSize={[4, 5]} key={id}>
@@ -79,5 +76,4 @@ const Footer = () => (
     }}
   />
 );
-
 export default Footer;

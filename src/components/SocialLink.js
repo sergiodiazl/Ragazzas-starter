@@ -20,7 +20,7 @@ const IconLink = styled(Link)`
   }
 `;
 
-const SocialLink = ({ fontAwesomeIcon,iconType, name, url, color }) => (
+const SocialLink = ({ fontAwesomeIcon, name, url, color }) => (
   <Tippy content={name} placement="bottom" trigger="mouseenter" arrow={false}>
     <IconLink
       href={url}
@@ -29,8 +29,11 @@ const SocialLink = ({ fontAwesomeIcon,iconType, name, url, color }) => (
       rel="noreferrer"
       aria-label={name}
     >  
-       {iconType!=='fas'?<FontAwesomeIcon icon={[iconType,fontAwesomeIcon]} />:<FontAwesomeIcon icon={fontAwesomeIcon }/> }
-    </IconLink>
+   <FontAwesomeIcon
+        icon={['fab', fontAwesomeIcon.toLowerCase()]}
+        size="2x"
+      />
+   </IconLink>
   </Tippy>
 );
 
