@@ -33,32 +33,32 @@ const Helmet = ({ theme = {} }) => (
     `}
     render={data => {
       const { name, description, profile } = data.contentfulAbout;
-      // profile
+      const { description: descriptionInfo } = description;
       const title = `${name} `;
 
       return (
         <ReactHelmet htmlAttributes={{ lang: 'es' }}>
           <meta charSet="utf-8" />
           <title>{title}</title>
-          <meta name="description" content={description} />
+          <meta name="description" content={descriptionInfo} />
           <link rel="shortcut icon" href={`https:${profile.favicon32.src}`} />
 
           <meta name="theme-color" content={theme.background} />
           <meta name="image" content={`https:${profile.favicon32.src}`} />
 
           <meta itemProp="name" content={title} />
-          <meta itemProp="description" content={description} />
+          <meta itemProp="description" content={descriptionInfo} />
           <meta itemProp="image" content={`https:${profile.favicon32.src}`} />
 
           <meta name="og:title" content={title} />
-          <meta name="og:description" content={description} />
+          <meta name="og:description" content={descriptionInfo} />
           <meta name="og:image" content={`https:${profile.bigIcon.src}`} />
           <meta name="og:site_name" content={title} />
           <meta name="og:locale" content="es_AR" />
           <meta name="og:type" content="website" />
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:title" content={title} />
-          <meta name="twitter:description" content={description} />
+          <meta name="twitter:description" content={descriptionInfo} />
 
           <meta name="twitter:image" content={`https:${profile.bigIcon.src}`} />
           <meta
