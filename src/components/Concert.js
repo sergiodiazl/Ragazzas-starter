@@ -33,6 +33,7 @@ const TicketButton = styled(Link)`
   color: ${props => props.theme.colors.primary};
   padding: 2%;
   width: 100%;
+  height: 100%;
   position: relative;
   border-radius: 15px;
   text-align: center;
@@ -66,19 +67,74 @@ const TicketButton = styled(Link)`
 const NoTicketButton = styled.div`
   display: block;
   color: ${props => props.theme.colors.primary};
-  background: ${props => props.theme.colors.primaryDark};
   padding: 2%;
   width: 100%;
+  height: 100%;
   border-radius: 15px;
   text-align: center;
+  position: relative;
+  &::after {
+    content: '';
+    background: gray;
+    width: 100%;
+    border-radius: 15px;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.5;
+  }
+  & > * {
+    position: relative;
+    z-index: 6;
+  }
 `;
+const renderTicketButton = (
+  cancelled,
+  tickets,
+  cancelledMessage,
+  ticketsMessage,
+  noTicketsMessage,
+  link,
+) => {
+  if (cancelled === true) {
+    return (
+      <NoTicketButton>
+        <Text fontWeight="bold">{cancelledMessage}</Text>
+      </NoTicketButton>
+    );
+  }
+  if (tickets === true) {
+    return (
+      <TicketButton href={link} target="_blank">
+        <Text fontWeight="bold">{ticketsMessage}</Text>
+      </TicketButton>
+    );
+  }
+  return (
+    <NoTicketButton>
+      <Text fontWeight="bold">{noTicketsMessage}</Text>
+    </NoTicketButton>
+  );
+};
+
 const Concert = props => {
   console.log(props);
-  const { concert, noTIcketsMessage, ticketsMessage, cancelledMessage } = props;
-  const { place, cancelled, time, link, message: messageText } = concert;
-  let message = undefined;
+  const { concert, noTicketsMessage, ticketsMessage, cancelledMessage } = props;
+  const {
+    place,
+    cancelled,
+    time,
+    tickets,
+    link,
+    message: messageText,
+  } = concert;
+  let message;
   console.log(messageText !== null);
   if (messageText !== null) {
+    // eslint-disable-next-line prefer-destructuring
     message = messageText.message;
   }
   return (
@@ -110,9 +166,14 @@ const Concert = props => {
           </Flex>
         </Flex>
         <Flex width={[3 / 10]}>
-          <TicketButton href={link} target="_blank">
-            <Text fontWeight="bold">{ticketsMessage}</Text>
-          </TicketButton>
+          {renderTicketButton(
+            cancelled,
+            tickets,
+            cancelledMessage,
+            ticketsMessage,
+            noTicketsMessage,
+            link,
+          )}
         </Flex>
       </Flex>
     </ConcertContainer>

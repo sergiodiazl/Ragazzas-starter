@@ -15,7 +15,7 @@ const Tour = () => (
           ticketsMessage
           message
           cancelledMessage
-          noTIcketsMessage
+          noTicketsMessage
           photo {
             fixed(width: 2000, quality: 100) {
               srcSet
@@ -31,6 +31,7 @@ const Tour = () => (
               time
               place
               link
+              tickets
               cancelled
               message {
                 message
@@ -44,7 +45,7 @@ const Tour = () => (
       const {
         photo,
         ticketsMessage,
-        noTIcketsMessage,
+        noTicketsMessage,
         message,
         cancelledMessage,
       } = data.contentfulTour;
@@ -60,9 +61,9 @@ const Tour = () => (
             alignItems="center"
             flexWrap="wrap"
             width="100%"
-            fontSize={[2, 3.5, 5]}
+            fontSize={[2, 4, 5]}
           >
-            <Text color="primary" width="100%">
+            <Text color="primary" width="100%" fontSize={[4, 6, 7]}>
               {message}
             </Text>
             <Flex
@@ -79,7 +80,7 @@ const Tour = () => (
                       concert={node}
                       cancelledMessage={cancelledMessage}
                       ticketsMessage={ticketsMessage}
-                      noTIcketsMessage={noTIcketsMessage}
+                      noTicketsMessage={noTicketsMessage}
                     />
                   ))
                 : null}

@@ -14,11 +14,13 @@ const HeaderContainer = styled(Headroom)`
   font-family: Amatic SC, Cabin, 'Open Sans', sans-serif;
   .headroom--unfixed {
     background: ${props => props.theme.colors.background};
+    min-height: 10vh;
   }
   .headroom--pinned {
     background: ${props => props.theme.colors.primaryDark};
     min-height: 10vh;
   }
+
   z-index: 1000;
   position: absolute;
   width: 100vw;
@@ -103,7 +105,12 @@ const Header = () => (
             return (
               <Fragment>
                 {homeLink}
-                <Flex flexWrap="wrap" mr={[0, 3, 5]}>
+                <Flex
+                  flexWrap="wrap"
+                  flex="0 1 50%"
+                  alignItems="center"
+                  justifyContent="center"
+                >
                   {navLinks}
                 </Flex>
               </Fragment>

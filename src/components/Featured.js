@@ -40,7 +40,41 @@ const FeaturedContainer = styled.div`
     z-index: 2;
   }
 `;
+const FeaturedLink = styled(Link)`
+  display: block;
+  color: ${props => props.theme.colors.primary};
+  padding: 2%;
+  width: 100%;
+  position: relative;
+  border-radius: 15px;
+  text-align: center;
+  text-decoration: none;
 
+  &:visited {
+    color: ${props => props.theme.colors.primary};
+  }
+  &::after {
+    content: '';
+    background: ${props => props.theme.colors.secondaryDark};
+    width: 100%;
+    border-radius: 15px;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.5;
+  }
+  &:hover ::after {
+    background: ${props => props.theme.colors.secondaryLight};
+    opacity: 0.8;
+  }
+  & > * {
+    position: relative;
+    z-index: 6;
+  }
+`;
 export const DefaultFeatured = () => (
   <StaticQuery
     query={graphql`
@@ -99,9 +133,6 @@ export const DefaultFeatured = () => (
   />
 );
 
-const FeaturedLink = styled(Link)`
-  color: ${props => props.theme.colors.secondarylight};
-`;
 const Featured = ({ node }) => {
   const { title, text, link, linkText, photo } = node;
   const { src: bgImgSrc, srcSet: bgImgSrcSet } = photo.fixed;
@@ -124,20 +155,15 @@ const Featured = ({ node }) => {
           textAlign="center"
           as="h1"
           color="secondary"
-          fontSize={[5, 6, 8]}
+          fontSize={[6, 7, 8]}
           mt={[50, 75, 100]}
           mb={[3, 4, 5]}
         >
           {title}
         </Heading>
-        <Flex flexDirection="column">
+        <Flex flexDirection="column" fontSize={[4, 5, 6]}>
           {featuredText ? (
-            <Text
-              fontSize={[3, 4, 5]}
-              fontWeight="bold"
-              my={[2, 2, 0]}
-              mx={[0, 0, 1]}
-            >
+            <Text fontWeight="bold" my={[2, 2, 0]} mx={[0, 0, 1]}>
               {featuredText}
             </Text>
           ) : null}
@@ -146,13 +172,12 @@ const Featured = ({ node }) => {
             <FeaturedLink
               href={link}
               target="_blank"
-              fontSize={[3, 4, 5]}
               fontWeight="bold"
               color="primary"
               my={[2, 2, 0]}
               mx={[0, 0, 1]}
             >
-              {linkText}
+              <Text>{linkText}</Text>
             </FeaturedLink>
           ) : null}
         </Flex>
