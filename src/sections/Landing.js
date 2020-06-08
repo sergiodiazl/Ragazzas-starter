@@ -59,21 +59,22 @@ const featuredContent = () => {
   );
   return featuredArray;
 };
-const LandingPage = () => {return (
-  <Section.Container id="home" padding="0">
-    <CarouselContainer
-      stopOnHover
-      useKeyboardArrows
-      showThumbs={false}
-      showStatus={false}
-    
-    >
-      {featuredContent().map(node => (
-        <Featured key={node.id} node={node} />
-      ))}
-    </CarouselContainer>
-  </Section.Container>
-);
+const LandingPage = () => {
+  return (
+    <Section.Container id="home" padding="0">
+      <CarouselContainer
+        stopOnHover
+        useKeyboardArrows
+        autoPlay
+        showThumbs={false}
+        showStatus={false}
+      >
+        {featuredContent().map(node => (
+          <Featured key={node.id} node={node} />
+        ))}
+      </CarouselContainer>
+    </Section.Container>
+  );
 };
 
 export default LandingPage;
