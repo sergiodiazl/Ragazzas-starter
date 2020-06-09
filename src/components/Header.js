@@ -13,12 +13,11 @@ const HeaderContainer = styled(Headroom)`
   font-family: Amatic SC, Cabin, 'Open Sans', sans-serif;
   .headroom--unfixed {
     background: ${props => props.theme.colors.background};
-    min-height: 10vh;
+    min-height: 5vh;
   }
   .headroom--pinned {
-   min-height:10vh;
+    min-height: 5vh;
     background: ${props => props.theme.colors.primaryDark};
-   
   }
 
   z-index: 1000;
@@ -42,43 +41,43 @@ const formatLinks = allLinks =>
     },
     { links: [], home: null },
   );
-  const Logo = () => (
-    <StaticQuery
-      query={graphql`
-        query LogoQuery {
-          contentfulAbout {
-            name
-            logo {
-              file {
-                url
-              }
-            }
-          }
-          site {
-            siteMetadata {
-              deterministicBehaviour
+const Logo = () => (
+  <StaticQuery
+    query={graphql`
+      query LogoQuery {
+        contentfulAbout {
+          name
+          logo {
+            file {
+              url
             }
           }
         }
-      `}
-      render={({ contentfulAbout }) => {
-        const { logo, name } = contentfulAbout;
-  
-        return (
-          <Image
-            src={logo.file.url}
-            p={[0, 1, 3]}
-            width="50%"
-            alt={name}
-            onClick={home.onClick}
-            style={{
-              cursor: 'pointer',
-            }}
-          />
-        );
-      }}
-    />
-  );
+        site {
+          siteMetadata {
+            deterministicBehaviour
+          }
+        }
+      }
+    `}
+    render={({ contentfulAbout }) => {
+      const { logo, name } = contentfulAbout;
+
+      return (
+        <Image
+          src={logo.file.url}
+          p={[0, 1, 3]}
+          width="50%"
+          alt={name}
+          onClick={home.onClick}
+          style={{
+            cursor: 'pointer',
+          }}
+        />
+      );
+    }}
+  />
+);
 const Header = () => (
   <HeaderContainer>
     <Fade top>
@@ -92,7 +91,7 @@ const Header = () => (
           {({ allLinks }) => {
             const { home, links } = formatLinks(allLinks);
 
-            const homeLink = home && Logo()
+            const homeLink = home && Logo();
             const navLinks = links.map(({ name, value }) => (
               <RouteLink
                 key={name}

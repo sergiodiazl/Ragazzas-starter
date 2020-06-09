@@ -68,10 +68,9 @@ box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 
 const FormCard = styled(Card)`
   width: 100%;
-  padding: 5%;
+  padding: 1%;
   &:hover {
     top: 0px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   }
 `;
 

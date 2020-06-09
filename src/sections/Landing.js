@@ -8,8 +8,8 @@ import Featured from '../components/Featured';
 
 const CarouselContainer = styled(Carousel)`
   width: 100%;
-  margin-top: 10vh;
-  height: 90vh;
+  margin-top: 5vh;
+  height: 95vh;
   & .carousel {
     height: 100%;
   }
