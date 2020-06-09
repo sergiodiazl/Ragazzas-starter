@@ -42,7 +42,7 @@ const About = () => (
               id
             }
           }
-          allContentfulMember {
+          allContentfulMember(sort: { fields: order }) {
             edges {
               node {
                 name

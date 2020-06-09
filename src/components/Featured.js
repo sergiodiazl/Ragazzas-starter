@@ -115,6 +115,7 @@ const Featured = ({ node }) => {
             <FeaturedLink
               href={link}
               target="_blank"
+              rel="noreferrer"
               fontWeight="bold"
               color="primary"
               my={[2, 2, 0]}

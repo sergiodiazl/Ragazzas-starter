@@ -26,7 +26,7 @@ const CarouselContainer = styled(Carousel)`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0;
+    padding-inline-start: 0;
   }
 `;
 

@@ -83,6 +83,7 @@ const NoTicketButton = styled.div`
     content: '';
     background: gray;
     width: 100%;
+    height: 100%;
     border-radius: 15px;
     background-size: cover;
     position: absolute;
@@ -114,7 +115,7 @@ const renderTicketButton = (
   }
   if (tickets === true) {
     return (
-      <TicketButton href={link} target="_blank">
+      <TicketButton href={link} rel="noreferrer" target="_blank">
         <Text fontWeight="bold">{ticketsMessage}</Text>
       </TicketButton>
     );
