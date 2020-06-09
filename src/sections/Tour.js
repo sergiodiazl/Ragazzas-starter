@@ -1,9 +1,6 @@
 import React from 'react';
-import { Box, Flex, Text } from 'rebass';
+import { Flex, Text } from 'rebass';
 import { StaticQuery, graphql } from 'gatsby';
-import styled from 'styled-components';
-import ReactMarkdown from 'react-markdown';
-import Fade from 'react-reveal/Fade';
 import Section from '../components/Section';
 import Concert from '../components/Concert';
 
@@ -16,6 +13,7 @@ const Tour = () => (
           message
           cancelledMessage
           noTicketsMessage
+          noConcertMessage
           photo {
             fixed(width: 2000, quality: 100) {
               srcSet
@@ -48,13 +46,19 @@ const Tour = () => (
         noTicketsMessage,
         message,
         cancelledMessage,
+        noConcertMessage,
       } = data.contentfulTour;
-      console.log(data.contentfulTour);
       const { src, srcSet } = photo.fixed;
       const { edges: concertsEdges } = data.allContentfulConcert;
+
       const concerts = concertsEdges.map(concert => concert.node);
       return (
-        <Section.Container id="Gira" bgImgSrc={src} minHeight="80vh">
+        <Section.Container
+          id="Gira"
+          bgImgSrc={src}
+          bgImgSrcSet={srcSet}
+          minHeight="50vh"
+        >
           <Section.Header name="Proximas Fechas" />
           <Flex
             justifyContent="center"
@@ -64,7 +68,7 @@ const Tour = () => (
             fontSize={[2, 3.5, 5]}
           >
             <Text color="primary" width="100%">
-              {message}
+              {concerts.length > 0 ? message : noConcertMessage}
             </Text>
             <Flex
               width="100%"

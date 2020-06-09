@@ -1,6 +1,9 @@
 import React from 'react';
+
+import PropTypes from 'prop-types';
 import { Box, Flex, Text, Link } from 'rebass';
 import styled from 'styled-components';
+
 import Fade from 'react-reveal/Fade';
 
 const ConcertContainer = styled.div`
@@ -124,7 +127,6 @@ const renderTicketButton = (
 };
 
 const Concert = props => {
-  console.log(props);
   const { concert, noTicketsMessage, ticketsMessage, cancelledMessage } = props;
   const {
     place,
@@ -135,7 +137,6 @@ const Concert = props => {
     message: messageText,
   } = concert;
   let message;
-  console.log(messageText !== null);
   if (messageText !== null) {
     // eslint-disable-next-line prefer-destructuring
     message = messageText.message;
@@ -195,5 +196,17 @@ const Concert = props => {
     </ConcertContainer>
   );
 };
-
+Concert.propTypes = {
+  concert: PropTypes.shape({
+    place: PropTypes.string,
+    time: PropTypes.string,
+    link: PropTypes.string,
+    cancelled: PropTypes.bool,
+    tickets: PropTypes.bool,
+    message: PropTypes.objectOf(PropTypes.string),
+  }),
+  cancelledMessage: PropTypes.string,
+  ticketsMessage: PropTypes.string,
+  noTicketsMessage: PropTypes.string,
+};
 export default Concert;

@@ -1,27 +1,25 @@
 import React from 'react';
 import { Box, Image, Flex } from 'rebass';
 
-import { useStaticQuery, StaticQuery, graphql } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
 import Fade from 'react-reveal/Fade';
 import Section from '../components/Section';
-import Triangle from '../components/Triangle';
 import markdownRenderer from '../components/MarkdownRenderer';
 
 import Member from '../components/Member';
 import SocialLink from '../components/SocialLink';
 
-
 const ProfilePicture = styled(Image)`
-    width: 100%;
+  width: 100%;
   height: auto;
   border-radius: 5%;
 `;
 
 const About = () => (
-  <Section.Container id="Nosotros" >
-    <Section.Header name="Nosotros"  />
+  <Section.Container id="Nosotros">
+    <Section.Header name="Nosotros" />
     <StaticQuery
       query={graphql`
         query AboutMeQuery {
@@ -78,13 +76,13 @@ const About = () => (
         const bandMembers = bandMembersArray.map(member => member.node);
         return (
           <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
-           <Box width={[1, 1 / 2]} px={[1, 2, 4]}>
+            <Box width={[1, 1 / 2]} px={[1, 2, 4]}>
               <Fade bottom>
                 <ReactMarkdown
                   source={aboutUs.childMarkdownRemark.rawMarkdownBody}
                   renderers={markdownRenderer}
                 />
-                    <Flex
+                <Flex
                   width="100%"
                   justifyContent="space-around"
                   flexWrap="wrap"

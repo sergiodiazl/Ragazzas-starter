@@ -38,7 +38,7 @@ const Layout = ({ children }) => {
   return (
     <main>
       <GlobalStyle />
-      <ThemeProvider theme={theme }>
+      <ThemeProvider theme={theme}>
         <ScrollingProvider>
           <Helmet />
           {children}

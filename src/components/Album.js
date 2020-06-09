@@ -1,17 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Box, Image, Flex, Heading, Text } from 'rebass';
-// import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
-// import ReactMarkdown from 'react-markdown';
 import Fade from 'react-reveal/Fade';
-
-// import markdownRenderer from '../components/MarkdownRenderer';
 
 const ProfilePicture = styled(Image)`
   width: 100%;
   height: auto;
 `;
-// verificar que tengan la misma estrucutra las dos posibilidades
 const PlaylistContainer = styled.div`
   position: relative;
   overflow: hidden;
@@ -31,7 +27,6 @@ const Album = ({ album, reverseBox }) => {
   const { name, year, photo, description, playlist } = album;
   const descriptionText = description.description;
   const { linkPlaylist } = playlist.linkPlaylist;
-
   return (
     <Flex
       justifyContent="center"
@@ -157,5 +152,16 @@ const Album = ({ album, reverseBox }) => {
     </Flex>
   );
 };
-
+Album.propTypes = {
+  reverseBox: PropTypes.bool,
+  album: PropTypes.shape({
+    name: PropTypes.string,
+    year: PropTypes.string,
+    photo: PropTypes.shape({ fixed: PropTypes.objectOf(PropTypes.string) }),
+    description: PropTypes.objectOf(PropTypes.string),
+    playlist: PropTypes.shape({
+      linkPlaylist: PropTypes.objectOf(PropTypes.string),
+    }),
+  }),
+};
 export default Album;

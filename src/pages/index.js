@@ -8,15 +8,16 @@ import Tour from '../sections/Tour';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Contact from '../sections/Contact';
+
 const IndexPage = () => (
   <Layout>
     <Header />
 
     <Landing />
-    <Albums/>
+    <Albums />
     <About />
     <Tour />
-    <Contact/>
+    <Contact />
     <Footer />
   </Layout>
 );

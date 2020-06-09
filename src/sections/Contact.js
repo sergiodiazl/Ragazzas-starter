@@ -1,15 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Box, Flex } from 'rebass';
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
-import Section from '../components/Section';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import Triangle from '../components/Triangle';
+import Section from '../components/Section';
 import { CardContainer, Card } from '../components/Card';
+
 library.add(faEnvelope);
 
 const Input = styled.input`
@@ -20,35 +19,32 @@ const Input = styled.input`
   background: ${props =>
     props.theme.colors[props.background] ||
     props.theme.colors.backgroundDark};} 
-  
-font-family: Cabin, 'Open Sans', sans-serif;
+  font-family: Cabin, 'Open Sans', sans-serif;
   border: none;
   border-radius: 3px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 `;
 const Label = styled.label`
 font-family: Amatic Sc,Cabin, 'Open Sans', sans-serif;
-
- 
-  color: ${props =>
-    props.theme.colors[props.color] || props.theme.colors.background};} 
-  border: none;
-  border-radius: 3px;
+color: ${props =>
+  props.theme.colors[props.color] || props.theme.colors.background};} 
+border: none;
+border-radius: 3px;
 `;
 const Textarea = styled.textarea`
 flex:1;
 padding: 2%;
 font-family: Cabin, 'Open Sans', sans-serif;
-  min-heigth:30vh;
-  color: ${props =>
-    props.theme.colors[props.color] || props.theme.colors.background};}
-  background: ${props =>
-    props.theme.colors[props.color] || props.theme.colors.backgroundDark};} 
-  border: none;
-  border-radius: 3px;
-  resize:none;
-  overflow:auto;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+min-height:30vh;
+color: ${props =>
+  props.theme.colors[props.color] || props.theme.colors.background};}
+background: ${props =>
+  props.theme.colors[props.color] || props.theme.colors.backgroundDark};} 
+border: none;
+border-radius: 3px;
+resize:none;
+overflow:auto;
+box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 `;
 
 const SubmitButton = styled.button`
@@ -162,7 +158,7 @@ const Contact = () => (
   <Section.Container id="Contacto">
     <Section.Header name="Dejanos un mensaje" icon="✍️" label="writing" />
 
-    <CardContainer minWidth="70vw">
+    <CardContainer minWidth="50vw">
       <FormCard>
         <Fade bottom delay={100}>
           <ContactForm />

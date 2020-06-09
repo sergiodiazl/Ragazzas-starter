@@ -23,10 +23,8 @@ const Albums = () => (
                 }
                 photo {
                   fixed(width: 2000, quality: 100) {
-                    height
                     srcSet
                     src
-                    width
                   }
                 }
                 playlist {

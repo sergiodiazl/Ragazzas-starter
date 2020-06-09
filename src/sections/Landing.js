@@ -1,7 +1,5 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Heading, Flex, Box, Text } from 'rebass';
-import { SectionLink } from 'react-scroll-section';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import styled from 'styled-components';
@@ -24,8 +22,13 @@ const CarouselContainer = styled(Carousel)`
     z-index: 1;
     width: 10%;
   }
+  &.carousel .control-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
 `;
-const centerHorizontally = { marginRight: 'auto', marginLeft: 'auto' };
 
 const featuredContent = () => {
   const featuredData = useStaticQuery(graphql`
@@ -43,10 +46,8 @@ const featuredContent = () => {
             }
             photo {
               fixed(width: 2000, quality: 100) {
-                width
                 src
                 srcSet
-                height
               }
             }
           }

@@ -7,7 +7,7 @@ import Slide from 'react-reveal/Slide';
 import LinkAnimated from './LinkAnimated';
 
 const SectionContainer = styled.div`
-  min-height: ${props =>[props.minHeight] };
+  min-height: ${props => [props.minHeight]};
   min-width: 320px;
   background: ${props => props.theme.colors.background} no-repeat center 0;
   min-height: ${props => [props.minHeight]};
@@ -42,13 +42,14 @@ const SectionContainer = styled.div`
   }
 `;
 
-const DefaultBackground = () => <div></div>;
+const DefaultBackground = () => <div />;
 const Container = ({
   id,
   children,
   Background = DefaultBackground,
   minHeight = '50vh',
-  bgImgSrc = 'null',
+  bgImgSrc = null,
+  bgImgSrcSet = null,
   padding = '5%',
 }) => (
   <Section id={id} style={{ position: 'relative' }}>
@@ -57,6 +58,7 @@ const Container = ({
       minHeight={minHeight}
       padding={padding}
       bgImgSrc={bgImgSrc}
+      bgImgSrcSet={bgImgSrcSet}
     >
       {children}
     </SectionContainer>
@@ -68,12 +70,14 @@ Container.propTypes = {
   children: PropTypes.node.isRequired,
   Background: PropTypes.func,
   bgImgSrc: PropTypes.string,
+  bgImgSrcSet: PropTypes.string,
   padding: PropTypes.string,
+  minHeight: PropTypes.string,
 };
 
 const Header = ({ name, icon = '', label = '' }) => (
   <Slide left>
-       <Heading color="primary" mb={4} fontSize={[6, 8]}>
+    <Heading color="primary" mb={4} fontSize={[6, 8]}>
       <LinkAnimated selected>
         {name}
         {icon && (

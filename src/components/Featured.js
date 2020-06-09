@@ -1,9 +1,9 @@
 import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
-import { Heading, Flex, Box, Text, Link } from 'rebass';
+
+import PropTypes from 'prop-types';
+import { Heading, Flex, Text, Link } from 'rebass';
 
 import styled from 'styled-components';
-import SocialLink from './SocialLink';
 
 const FeaturedContainer = styled.div`
   color: ${props => props.theme.colors.primary};
@@ -76,7 +76,6 @@ const FeaturedLink = styled(Link)`
   }
 `;
 
-
 const Featured = ({ node }) => {
   const { title, text, link, linkText, photo } = node;
   const { src: bgImgSrc, srcSet: bgImgSrcSet } = photo.fixed;
@@ -130,6 +129,17 @@ const Featured = ({ node }) => {
   );
 };
 
+Featured.propTypes = {
+  node: PropTypes.shape({
+    title: PropTypes.string,
+    text: PropTypes.objectOf(PropTypes.string),
+    link: PropTypes.string,
+    linkText: PropTypes.string,
+    photo: PropTypes.shape({
+      fixed: PropTypes.objectOf(PropTypes.string),
+    }),
+  }),
+};
 export default Featured;
 /* content: "";
       background-image: url('https://placekitten.com/1200/800');
