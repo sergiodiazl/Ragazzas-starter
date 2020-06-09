@@ -67,6 +67,9 @@ const LandingPage = () => {
         stopOnHover
         useKeyboardArrows
         autoPlay
+        infiniteLoop
+        swipeable
+        stopOnHover
         showThumbs={false}
         showStatus={false}
       >
