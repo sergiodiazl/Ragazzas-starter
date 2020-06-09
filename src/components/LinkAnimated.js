@@ -1,10 +1,11 @@
 import styled from 'styled-components';
-
+import PropTypes from 'prop-types';
 const LinkAnimated = styled.span`
   text-decoration: none;
   position: relative;
   margin-bottom: 0;
-  padding-bottom: 5px;
+  padding-bottom:   ${props =>
+    props.underlinePosition ? `${props.underlinePosition}` : '5px'};
   color: ${props =>
     props.theme.colors[props.color] || props.theme.colors.primary};} 
   ${props =>
@@ -32,5 +33,8 @@ const LinkAnimated = styled.span`
     width: 100%;
   }
 `;
+LinkAnimated.propTypes = {
+  underlinePosition: PropTypes.string,
+};
 
 export default LinkAnimated;
