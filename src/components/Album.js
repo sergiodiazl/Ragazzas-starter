@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Box, Image, Flex, Heading, Text } from 'rebass';
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
-import { webpSupport } from '../utils/imageUtils';
 
 const ProfilePicture = styled(Image)`
   width: 100%;
@@ -36,10 +35,6 @@ const Album = ({ album, reverseBox }) => {
 
   let src = srcNormal;
   let srcSet = srcSetNormal;
-
-  if (webpSupport()) {
-    src = srcWebp;
-  }
 
   const descriptionText = description.description;
   const { linkPlaylist } = playlist.linkPlaylist;

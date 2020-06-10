@@ -8,7 +8,6 @@ import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
 
 import SocialLink from './SocialLink';
-import { webpSupport } from '../utils/imageUtils';
 // import markdownRenderer from '../components/MarkdownRenderer';
 
 const ProfilePicture = styled(Image)`
@@ -27,8 +26,8 @@ const Member = ({ member, reverseBox }) => {
     srcSetWebp,
     sizes,
   } = photo.fluid;
-  const src = webpSupport ? srcWebp : srcNormal;
-  const srcSet = webpSupport ? srcSetWebp : srcSetNormal;
+  const src = srcNormal;
+  const srcSet = srcSetNormal;
   const infoText = JSON.parse(info.info).content[0].content[0].value;
   console.log('Photo', photo);
   return (
@@ -165,6 +164,7 @@ Member.propTypes = {
     // eslint-disable-next-line react/forbid-prop-types
     info: PropTypes.object,
     socialLinks: PropTypes.array,
+    photo: PropTypes.shape({ fluid: PropTypes.objectOf(PropTypes.string) }),
   }),
 
   reverseBox: PropTypes.bool,
