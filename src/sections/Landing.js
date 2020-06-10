@@ -49,6 +49,11 @@ const featuredContent = () => {
                 src
                 srcSet
               }
+              fluid(maxWidth: 2000, quality: 100) {
+                sizes
+                src
+                srcSet
+              }
             }
           }
         }
@@ -66,10 +71,8 @@ const LandingPage = () => {
       <CarouselContainer
         stopOnHover
         useKeyboardArrows
-        autoPlay
         infiniteLoop
         swipeable
-        stopOnHover
         showThumbs={false}
         showStatus={false}
       >

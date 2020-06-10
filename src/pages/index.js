@@ -12,8 +12,8 @@ import Contact from '../sections/Contact';
 const IndexPage = () => (
   <Layout>
     <Header />
-
     <Landing />
+
     <Albums />
     <About />
     <Tour />

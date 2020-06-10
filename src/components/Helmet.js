@@ -10,8 +10,9 @@ const Helmet = ({ theme = {} }) => (
       query HelmetQuery {
         contentfulAbout {
           name
-          description{description}
-        
+          description {
+            description
+          }
 
           profile {
             favicon16: resize(width: 16) {
@@ -81,6 +82,10 @@ const Helmet = ({ theme = {} }) => (
             sizes="16x16"
             href={`https:${profile.favicon16.src}`}
           />
+          {/*
+        checks wepb supoort
+*/}
+          <script src="modernizr-custom.js"></script>
         </ReactHelmet>
       );
     }}

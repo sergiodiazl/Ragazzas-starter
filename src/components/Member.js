@@ -8,6 +8,7 @@ import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
 
 import SocialLink from './SocialLink';
+import { webpSupport } from '../utils/imageUtils';
 // import markdownRenderer from '../components/MarkdownRenderer';
 
 const ProfilePicture = styled(Image)`
@@ -19,8 +20,17 @@ const ProfilePicture = styled(Image)`
 // verificar que tengan la misma estrucutra las dos posibilidades
 const Member = ({ member, reverseBox }) => {
   const { name, photo, role, info, socialLinks } = member;
+  const {
+    src: srcNormal,
+    srcWebp,
+    srcSet: srcSetNormal,
+    srcSetWebp,
+    sizes,
+  } = photo.fluid;
+  const src = webpSupport ? srcWebp : srcNormal;
+  const srcSet = webpSupport ? srcSetWebp : srcSetNormal;
   const infoText = JSON.parse(info.info).content[0].content[0].value;
-
+  console.log('Photo', photo);
   return (
     <Flex
       justifyContent="center"
@@ -49,8 +59,9 @@ const Member = ({ member, reverseBox }) => {
             <Box width={[1, 1 / 2]} px={[1, 2, 4]}>
               <Fade right>
                 <ProfilePicture
-                  src={photo.fixed.src}
-                  srcSet={photo.fixed.srcSet}
+                  src={src}
+                  srcSet={srcSet}
+                  sizes={sizes}
                   alt={name}
                   my={[4, 4, 0]}
                   mx={[1]}
@@ -131,8 +142,9 @@ const Member = ({ member, reverseBox }) => {
             <Box width={[1, 1 / 2]} px={[1, 2, 4]}>
               <Fade right>
                 <ProfilePicture
-                  src={photo.fixed.src}
-                  srcSet={photo.fixed.srcSet}
+                  src={src}
+                  srcSet={srcSet}
+                  sizes={sizes}
                   alt={name}
                   my={[1, 1, 0]}
                   mx={[0, 0, 1]}
@@ -146,4 +158,15 @@ const Member = ({ member, reverseBox }) => {
   );
 };
 
+Member.propTypes = {
+  member: PropTypes.shape({
+    name: PropTypes.string,
+    role: PropTypes.string,
+    // eslint-disable-next-line react/forbid-prop-types
+    info: PropTypes.object,
+    socialLinks: PropTypes.array,
+  }),
+
+  reverseBox: PropTypes.bool,
+};
 export default Member;

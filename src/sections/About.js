@@ -52,11 +52,12 @@ const About = () => (
                   info
                 }
                 photo {
-                  fixed(width: 2000, quality: 100) {
-                    width
+                  fluid(maxWidth: 1500, quality: 100) {
+                    sizes
                     src
                     srcSet
-                    height
+                    srcWebp
+                    srcSetWebp
                   }
                 }
                 socialLinks {

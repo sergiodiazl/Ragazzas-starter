@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Box, Image, Flex, Heading, Text } from 'rebass';
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
+import { webpSupport } from '../utils/imageUtils';
 
 const ProfilePicture = styled(Image)`
   width: 100%;
@@ -25,6 +26,21 @@ const PlaylistContainer = styled.div`
 `;
 const Album = ({ album, reverseBox }) => {
   const { name, year, photo, description, playlist } = album;
+  const {
+    src: srcNormal,
+    srcWebp,
+    srcSet: srcSetNormal,
+    srcSetWebp,
+    sizes,
+  } = photo.fluid;
+
+  let src = srcNormal;
+  let srcSet = srcSetNormal;
+
+  if (webpSupport()) {
+    src = srcWebp;
+  }
+
   const descriptionText = description.description;
   const { linkPlaylist } = playlist.linkPlaylist;
   return (
@@ -56,8 +72,9 @@ const Album = ({ album, reverseBox }) => {
             <Box width={[1, 1 / 2]} px={[1, 2, 4]}>
               <Fade right>
                 <ProfilePicture
-                  src={photo.fixed.src}
-                  srcSet={photo.fixed.srcSet}
+                  src={src}
+                  srcSet={srcSet}
+                  sizes={sizes}
                   alt={name}
                   my={[4, 4, 0]}
                   mx={[0, 0, 1]}
@@ -138,8 +155,9 @@ const Album = ({ album, reverseBox }) => {
             <Box width={[1, 1 / 2]} px={[1, 2, 4]}>
               <Fade right>
                 <ProfilePicture
-                  src={photo.fixed.src}
-                  srcSet={photo.fixed.srcSet}
+                  src={src}
+                  srcSet={srcSet}
+                  sizes={sizes}
                   alt={name}
                   my={[1, 1, 0]}
                   mx={[0, 0, 1]}
@@ -157,7 +175,7 @@ Album.propTypes = {
   album: PropTypes.shape({
     name: PropTypes.string,
     year: PropTypes.string,
-    photo: PropTypes.shape({ fixed: PropTypes.objectOf(PropTypes.string) }),
+    photo: PropTypes.shape({ fluid: PropTypes.objectOf(PropTypes.string) }),
     description: PropTypes.objectOf(PropTypes.string),
     playlist: PropTypes.shape({
       linkPlaylist: PropTypes.objectOf(PropTypes.string),

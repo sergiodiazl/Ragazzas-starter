@@ -48,8 +48,12 @@ const Logo = () => (
         contentfulAbout {
           name
           logo {
-            file {
-              url
+            fluid(maxWidth: 900) {
+              srcWebp
+              srcSetWebp
+              src
+              srcSet
+              sizes
             }
           }
         }
@@ -62,10 +66,12 @@ const Logo = () => (
     `}
     render={({ contentfulAbout }) => {
       const { logo, name } = contentfulAbout;
-
+      const { sizes, src, srcSet } = logo.fluid;
       return (
         <Image
-          src={logo.file.url}
+          src={src}
+          srcSet={srcSet}
+          sizes={sizes}
           p={[0, 1, 3]}
           width="50%"
           alt={name}

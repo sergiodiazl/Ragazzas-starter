@@ -22,9 +22,10 @@ const Albums = () => (
                   description
                 }
                 photo {
-                  fixed(width: 2000, quality: 100) {
+                  fluid(maxWidth: 1500, quality: 100) {
                     srcSet
                     src
+                    sizes
                   }
                 }
                 playlist {
