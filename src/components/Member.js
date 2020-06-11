@@ -29,7 +29,7 @@ const Member = ({ member, reverseBox }) => {
   const src = srcNormal;
   const srcSet = srcSetNormal;
   const infoText = JSON.parse(info.info).content[0].content[0].value;
-  console.log('Photo', photo);
+
   return (
     <Flex
       justifyContent="center"
@@ -141,8 +141,8 @@ const Member = ({ member, reverseBox }) => {
             <Box width={[1, 1 / 2]} px={[1, 2, 4]}>
               <Fade right>
                 <ProfilePicture
-                  src={src}
                   srcSet={srcSet}
+                  src={src}
                   sizes={sizes}
                   alt={name}
                   my={[1, 1, 0]}

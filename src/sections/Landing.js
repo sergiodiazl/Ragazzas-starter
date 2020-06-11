@@ -45,11 +45,7 @@ const featuredContent = () => {
               text
             }
             photo {
-              fixed(width: 2000, quality: 100) {
-                src
-                srcSet
-              }
-              fluid(maxWidth: 2000, quality: 100) {
+              fluid(maxWidth: 2000, quality: 75) {
                 sizes
                 src
                 srcSet

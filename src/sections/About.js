@@ -31,8 +31,12 @@ const About = () => (
             }
             profile {
               title
-              image: resize(width: 2000, quality: 100) {
+              image: fluid(maxWidth: 2000, quality: 80) {
+                sizes
                 src
+                srcSet
+                srcWebp
+                srcSetWebp
               }
             }
             socialLinks {
@@ -52,7 +56,7 @@ const About = () => (
                   info
                 }
                 photo {
-                  fluid(maxWidth: 1500, quality: 100) {
+                  fluid(maxWidth: 1500, quality: 80) {
                     sizes
                     src
                     srcSet

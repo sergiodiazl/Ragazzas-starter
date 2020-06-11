@@ -33,6 +33,20 @@ const plugins = [
   },
   'gatsby-transformer-remark',
   'gatsby-plugin-offline',
+  {
+    resolve: 'gatsby-plugin-preconnect',
+    options: {
+      domains: [
+        'https://use.fontawesome.com',
+        'https://fonts.gstatic.com',
+        'https://i.scdn.co',
+        'https://open.scdn.co',
+        'https://www.googletagmanager.com',
+        'https://fonts.googleapis.com',
+        'https://www.google-analytics.com',
+      ],
+    },
+  },
 ];
 
 module.exports = client.getEntries().then(() => {

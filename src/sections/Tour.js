@@ -15,7 +15,7 @@ const Tour = () => (
           noTicketsMessage
           noConcertMessage
           photo {
-            fixed(width: 2000, quality: 100) {
+            fixed(width: 2000, quality: 75) {
               srcSet
               src
               width

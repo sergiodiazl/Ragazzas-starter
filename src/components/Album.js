@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Box, Image, Flex, Heading, Text } from 'rebass';
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
+import { webpSupport } from '../utils/imageUtils';
 
 const ProfilePicture = styled(Image)`
   width: 100%;
@@ -35,7 +36,8 @@ const Album = ({ album, reverseBox }) => {
 
   let src = srcNormal;
   let srcSet = srcSetNormal;
-
+  const useWebp = webpSupport.then(supported => supported);
+  console.log(useWebp);
   const descriptionText = description.description;
   const { linkPlaylist } = playlist.linkPlaylist;
   return (
@@ -67,8 +69,8 @@ const Album = ({ album, reverseBox }) => {
             <Box width={[1, 1 / 2]} px={[1, 2, 4]}>
               <Fade right>
                 <ProfilePicture
-                  src={src}
                   srcSet={srcSet}
+                  src={src}
                   sizes={sizes}
                   alt={name}
                   my={[4, 4, 0]}
@@ -150,8 +152,8 @@ const Album = ({ album, reverseBox }) => {
             <Box width={[1, 1 / 2]} px={[1, 2, 4]}>
               <Fade right>
                 <ProfilePicture
-                  src={src}
                   srcSet={srcSet}
+                  src={src}
                   sizes={sizes}
                   alt={name}
                   my={[1, 1, 0]}
