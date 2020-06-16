@@ -61,8 +61,8 @@ typings/
 .cache/
 public/
 .gatsby-context.js
-netlify.toml
-
+.toml
+!netlify.toml
 # mac FS
 .DS_Store
 .vscode/
