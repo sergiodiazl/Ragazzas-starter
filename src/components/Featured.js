@@ -94,6 +94,8 @@ const Featured = ({ node }) => {
         alignItems="center"
         justifyContent="space-around"
         height="100%"
+        width="80%"
+        alignSelf="center"
         flexDirection="column"
         flexFlow="wrap"
         color="primary"

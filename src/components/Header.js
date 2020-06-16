@@ -13,11 +13,16 @@ const HeaderContainer = styled(Headroom)`
   font-family: Amatic SC, Cabin, 'Open Sans', sans-serif;
   .headroom--unfixed {
     background: ${props => props.theme.colors.background};
+
     min-height: 5vh;
+    display: flex;
+    align-items: center;
   }
   .headroom--pinned {
     min-height: 5vh;
     background: ${props => props.theme.colors.primaryDark};
+    display: flex;
+    align-items: center;
   }
 
   z-index: 1000;
@@ -41,7 +46,7 @@ const formatLinks = allLinks =>
     },
     { links: [], home: null },
   );
-const Logo = () => (
+const Logo = ({ onClick }) => (
   <StaticQuery
     query={graphql`
       query LogoQuery {
@@ -73,9 +78,9 @@ const Logo = () => (
           srcSet={srcSet}
           sizes={sizes}
           p={[0, 1, 3]}
-          width="50%"
+          width="35%"
           alt={name}
-          onClick={home.onClick}
+          onClick={onClick}
           style={{
             cursor: 'pointer',
           }}
@@ -96,8 +101,9 @@ const Header = () => (
         <SectionLinks>
           {({ allLinks }) => {
             const { home, links } = formatLinks(allLinks);
+            console.log(home);
+            console.log(links);
 
-            const homeLink = home && Logo();
             const navLinks = links.map(({ name, value }) => (
               <RouteLink
                 key={name}
@@ -109,10 +115,10 @@ const Header = () => (
 
             return (
               <Fragment>
-                {homeLink}
+                {home !== null ? <Logo onClick={home.onClick} /> : <Logo />}
                 <Flex
                   flexWrap="wrap"
-                  flex="0 1 50%"
+                  flex="0 1 65%"
                   alignItems="center"
                   justifyContent="center"
                 >

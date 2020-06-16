@@ -8,8 +8,8 @@ import Featured from '../components/Featured';
 
 const CarouselContainer = styled(Carousel)`
   width: 100%;
-  margin-top: 5vh;
-  height: 95vh;
+
+  height: 100vh;
   & .carousel {
     height: 100%;
   }
@@ -17,16 +17,20 @@ const CarouselContainer = styled(Carousel)`
   & .slider {
     height: 100%;
   }
-  &.carousel .control-arrow,
+  .carousel .control-arrow,
   .carousel.carousel-slider .control-arrow {
     z-index: 1;
     width: 10%;
   }
-  &.carousel .control-dots {
+  .carousel .control-dots {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-inline-start: 0;
+    padding: 0;
+  }
+  .carousel .control-dots .dot {
+    width: 48px;
+    height: 48px;
   }
 `;
 
