@@ -120,7 +120,7 @@ const Header = () => (
                   flexWrap="wrap"
                   flex="0 1 65%"
                   alignItems="center"
-                  justifyContent="center"
+                  justifyContent="space-around"
                 >
                   {navLinks}
                 </Flex>
