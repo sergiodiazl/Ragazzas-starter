@@ -20,14 +20,12 @@ const ProfilePicture = styled(Image)`
 const Member = ({ member, reverseBox }) => {
   const { name, photo, role, info, socialLinks } = member;
   const {
-    src: srcNormal,
-    srcWebp,
-    srcSet: srcSetNormal,
-    srcSetWebp,
+    src,
+    srcSet,
+
     sizes,
   } = photo.fluid;
-  const src = srcNormal;
-  const srcSet = srcSetNormal;
+
   const infoText = JSON.parse(info.info).content[0].content[0].value;
 
   return (

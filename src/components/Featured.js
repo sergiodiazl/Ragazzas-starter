@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { Heading, Flex, Text, Link } from 'rebass';
 
 import styled from 'styled-components';
-import { prepareSrcSet } from '../utils/imageUtils';
 
 const FeaturedContainer = styled.div`
   color: ${props => props.theme.colors.primary};
@@ -20,9 +19,7 @@ const FeaturedContainer = styled.div`
 
   background: no-repeat center center;
   background-image: url(${props => props.bgImgSrc});
- { /*background-image: image-set(${props => props.bgImgSrcSet});
- */}
- 
+
   background-size: cover;
   height: 100%;
   width: 100%;
@@ -81,8 +78,8 @@ const FeaturedLink = styled(Link)`
 
 const Featured = ({ node }) => {
   const { title, text, link, linkText, photo } = node;
-  const { src: bgImgSrc, srcSet } = photo.fluid;
-  const bgImgSrcSet = prepareSrcSet(srcSet);
+  const { src: bgImgSrc, srcSet: bgImgSrcSet } = photo.fluid;
+
   const featuredText = text.text;
   return (
     <FeaturedContainer

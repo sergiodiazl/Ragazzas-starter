@@ -31,7 +31,7 @@ const About = () => (
             }
             profile {
               title
-              image: fluid(maxWidth: 2000, quality: 80) {
+              image: fluid(maxWidth: 1000, quality: 80) {
                 sizes
                 src
                 srcSet
@@ -56,7 +56,7 @@ const About = () => (
                   info
                 }
                 photo {
-                  fluid(maxWidth: 1500, quality: 80) {
+                  fluid(maxWidth: 1000, quality: 80) {
                     sizes
                     src
                     srcSet

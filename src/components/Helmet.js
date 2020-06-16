@@ -82,10 +82,6 @@ const Helmet = ({ theme = {} }) => (
             sizes="16x16"
             href={`https:${profile.favicon16.src}`}
           />
-          {/*
-        checks wepb supoort
-*/}
-          <script src="modernizr-custom.js"></script>
         </ReactHelmet>
       );
     }}

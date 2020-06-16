@@ -22,7 +22,7 @@ const Albums = () => (
                   description
                 }
                 photo {
-                  fluid(maxWidth: 1500, quality: 75) {
+                  fluid(maxWidth: 1000, quality: 80) {
                     srcSet
                     src
                     sizes
