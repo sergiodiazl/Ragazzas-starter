@@ -78,7 +78,7 @@ const Logo = ({ onClick }) => (
           srcSet={srcSet}
           sizes={sizes}
           p={[0, 1, 3]}
-          width="35%"
+          width="100%"
           alt={name}
           onClick={onClick}
           style={{
@@ -101,8 +101,6 @@ const Header = () => (
         <SectionLinks>
           {({ allLinks }) => {
             const { home, links } = formatLinks(allLinks);
-            console.log(home);
-            console.log(links);
 
             const navLinks = links.map(({ name, value }) => (
               <RouteLink
@@ -115,7 +113,10 @@ const Header = () => (
 
             return (
               <Fragment>
-                {home !== null ? <Logo onClick={home.onClick} /> : <Logo />}
+                <Flex width="35%">
+                  {home !== null ? <Logo onClick={home.onClick} /> : <Logo />}
+                </Flex>
+
                 <Flex
                   flexWrap="wrap"
                   flex="0 1 65%"
